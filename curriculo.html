@@ -617,26 +617,43 @@
     }
 
     @media print {
+      html,
       body {
-        background: #ffffff;
-        padding: 0;
-        gap: 0;
+        display: block !important;
+        width: 210mm !important;
+        background: #ffffff !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
       }
 
       .cv-toolbar {
-        display: none;
+        display: none !important;
       }
 
       .a4-page {
-        box-shadow: none;
-        width: 210mm;
-        height: 296.5mm;
-        max-height: 296.5mm;
-        margin: 0;
+        box-shadow: none !important;
+        width: 210mm !important;
+        height: 297mm !important;
+        max-height: 297mm !important;
+        grid-template-columns: 32.5% 67.5% !important;
+        overflow: hidden !important;
+        margin: 0 !important;
+      }
+
+      .a4-page:nth-of-type(2) .main {
+        padding: 15px 19px 13px;
+        gap: 9px;
+      }
+
+      .a4-page:nth-of-type(2) .project-card {
+        padding: 6.5px 9px;
+        gap: 2.5px;
       }
     }
 
-    @media (max-width: 820px) {
+    @media screen and (max-width: 820px) {
       .a4-page {
         width: 100%;
         height: auto;
@@ -648,6 +665,10 @@
         flex-direction: column;
         align-items: flex-start;
       }
+
+      .btn-print-desktop {
+        display: none;
+      }
     }
   </style>
 </head>
@@ -656,12 +677,13 @@
   <div class="cv-toolbar">
     <div class="cv-toolbar-left">
       <strong>Currículo — Jonas Carvalho</strong>
-      <span>· Modelo A4 (2 páginas)</span>
+      <span>· Modelo A4 Oficial (2 páginas)</span>
     </div>
     <div class="cv-toolbar-actions">
       <a href="index.html" class="btn-tool">← Voltar ao Portfólio</a>
-      <a href="Jonas-Carvalho-CV.pdf" download class="btn-tool">Baixar PDF Direto ↓</a>
-      <button type="button" class="btn-tool primary" onclick="window.print()">Imprimir / Salvar PDF</button>
+      <a href="Jonas-Carvalho-CV.pdf" target="_blank" rel="noopener" class="btn-tool">Abrir PDF ↗</a>
+      <a href="Jonas-Carvalho-CV.pdf" download="Jonas-Carvalho-CV.pdf" class="btn-tool primary">Baixar PDF Oficial ↓</a>
+      <button type="button" class="btn-tool btn-print-desktop" onclick="window.print()">Imprimir</button>
     </div>
   </div>
 
@@ -1064,6 +1086,31 @@
           </p>
           <p class="project-stack">Stack: GitLab CI · Jenkins · Red Hat OpenShift · Flutter + IA · APIs Plugáveis · ERP Legado · Trilha de Auditoria</p>
         </article>
+      </section>
+
+      <section class="section" style="margin-top: 4px;">
+        <div class="sec-head">
+          <span class="sec-square"></span>
+          <h2>Pilares de Liderança Técnica, DevSecOps &amp; Entrega Corporativa</h2>
+        </div>
+        <div class="creds-mini-grid" style="gap: 6px;">
+          <div class="creds-mini-card" style="padding: 6px 8px; gap: 2.5px;">
+            <strong>Direção de Torre RPA &amp; Squads Multidisciplinares</strong>
+            <span>Condução de cerimônias técnicas, code reviews, definição de padrões de arquitetura entre times BPO/corporativos, estimativas HLE/PCV, mentoria contínua e formação de desenvolvedores.</span>
+          </div>
+          <div class="creds-mini-card" style="padding: 6px 8px; gap: 2.5px;">
+            <strong>Esteiras CI/CD, Agentes Jenkins &amp; DevSecOps</strong>
+            <span>Construção de controladores Jenkins distribuídos com workers/agentes containerizados, pipelines automatizadas no GitLab CI, gestão de segredos e gates contínuos de qualidade e AppSec.</span>
+          </div>
+          <div class="creds-mini-card" style="padding: 6px 8px; gap: 2.5px;">
+            <strong>Assessments Estratégicos, M&amp;A &amp; Modernização de Legado</strong>
+            <span>Levantamento de parques aplicacionais complexos, mapeamento de dependências com ERPs/OT, blueprints em ondas de transição e decomposição gradual de monólitos legados.</span>
+          </div>
+          <div class="creds-mini-card" style="padding: 6px 8px; gap: 2.5px;">
+            <strong>Negociação Executiva, Gestão de Crise &amp; Continuidade</strong>
+            <span>Formação complementar em negociação, Lean/VSM e resposta a incidentes críticos (PUCRS), aliando profundidade de engenharia à comunicação clara com stakeholders e clientes.</span>
+          </div>
+        </div>
       </section>
     </div>
   </main>
