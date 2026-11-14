@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/" xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+  <ShortName>Jonas Carvalho</ShortName>
+  <Description>Buscar projetos, arquiteturas, tecnologias e certificações no portfólio de Jonas Carvalho</Description>
+  <InputEncoding>UTF-8</InputEncoding>
+  <OutputEncoding>UTF-8</OutputEncoding>
+  <Language>pt-BR</Language>
+  <Image width="16" height="16" type="image/x-icon">https://jonas.novashift.com.br/favicon.ico</Image>
+  <Image width="192" height="192" type="image/png">https://jonas.novashift.com.br/icon-192.png</Image>
+  <Url type="text/html" method="get" template="https://jonas.novashift.com.br/?q={searchTerms}#casos" />
+  <Url type="application/opensearchdescription+xml" rel="self" template="https://jonas.novashift.com.br/opensearch.xml" />
+  <moz:SearchForm>https://jonas.novashift.com.br/#casos</moz:SearchForm>
+</OpenSearchDescription>

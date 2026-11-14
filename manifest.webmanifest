@@ -1,0 +1,89 @@
+{
+  "name": "Jonas Carvalho — Líder Técnico · Arquitetura, RPA, DevOps & IA",
+  "short_name": "Jonas Carvalho",
+  "description": "Portfólio executivo, certificações verificadas e currículo A4 de Jonas Carvalho — Líder Técnico em Arquitetura de Software, RPA, DevOps, Multi-Cloud, Legado e IA.",
+  "lang": "pt-BR",
+  "dir": "ltr",
+  "start_url": "/?utm_source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#07080a",
+  "theme_color": "#3b82f6",
+  "categories": ["technology", "business", "productivity", "education"],
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "16x16 32x32 48x48",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/og-default.jpg",
+      "sizes": "1200x630",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "Portfólio Executivo de Jonas Carvalho"
+    },
+    {
+      "src": "/og-square.jpg",
+      "sizes": "400x400",
+      "type": "image/jpeg",
+      "form_factor": "narrow",
+      "label": "Jonas Carvalho — Líder Técnico"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Projetos & Arquiteturas",
+      "short_name": "Projetos",
+      "description": "Estudos de caso em RPA, Cloud, Legado e IA",
+      "url": "/#casos",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+    },
+    {
+      "name": "Certificações & Diplomas (14)",
+      "short_name": "Certificações",
+      "description": "Microsoft, IBM, Google Cloud, PUCRS, Cisco e FATEC",
+      "url": "/certificacoes.html",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+    },
+    {
+      "name": "Baixar Currículo PDF",
+      "short_name": "Currículo PDF",
+      "description": "Currículo executivo A4 em 2 páginas",
+      "url": "/Jonas-Carvalho-CV.pdf",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+    }
+  ]
+}

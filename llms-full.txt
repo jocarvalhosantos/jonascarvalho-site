@@ -1,0 +1,88 @@
+# Dossiê Técnico Completo — Jonas Carvalho (Líder Técnico & Arquiteto de Soluções)
+
+URL Canônica: https://jonas.novashift.com.br/
+Localização: São Paulo, SP — Brasil
+Idioma: pt-BR
+Atualizado em: 2026-11-14
+
+---
+
+## 1. Perfil Executivo
+
+Jonas Carvalho é Líder Técnico com mais de 8 anos de experiência prática na arquitetura, desenvolvimento e modernização de sistemas críticos corporativos, engenharia e gestão de Torre de RPA, esteiras DevOps/DevSecOps com Jenkins Workers e GitLab CI, infraestrutura Multi-Cloud (AWS, Oracle Cloud OCI, Google Cloud Platform e Red Hat OpenShift), condução de Assessments estratégicos (cisões societárias M&A e diagnósticos de legado) e desenvolvimento de plataformas corporativas com Inteligência Artificial Generativa e RAG.
+
+Atua na direção técnica de squads multidisciplinares em operações de grande escala nos setores de telecomunicações, indústria, energia, finanças e serviços, combinando profundidade arquitetural hands-on com governança executiva, estimativas de esforço (HLE/PCV) e negociação com stakeholders.
+
+---
+
+## 2. Pilares de Especialidade
+
+### 2.1. Arquitetura RPA Enterprise, Híbrida & Microsserviços
+- Concepção de robôs distribuídos e resilientes em **Python (FastAPI, Selenium Headless, PyAutoGUI, UIA)**, **Macro Manager (C#/.NET)**, **UiPath**, **Automation 360**, **IBM RPA** e **Power Automate**.
+- Decomposição de automações monolíticas legadas (incluindo parques em Java e scripts acoplados) para microsserviços containerizados em **Docker / Docker Compose**, operando sob proxy reverso **Nginx**, filas assíncronas (**RabbitMQ / AWS SQS**) e cache distribuído (**Redis**).
+- Gestão técnica de Torre de RPA, padronização de pacotes reutilizáveis entre operações BPO, cofre e proteção de credenciais e estudos de viabilidade/migração entre suites RPA.
+
+### 2.2. DevOps, DevSecOps, Jenkins Workers & Observabilidade
+- Implementação de controladores **Jenkins** com agentes e workers efêmeros em containers Docker para orquestração paralela de robôs e builds.
+- Estruturação de esteiras CI/CD no **GitLab CI** e Jenkins com análise estática de qualidade e segurança (**SonarQube**, SAST, conformidade **OWASP**).
+- Identidade federada e SSO corporativo com **Keycloak (OAuth 2.0 / OpenID Connect)**, rotação segura de segredos e observabilidade full-stack com **Grafana, Prometheus, Loki e OpenTelemetry**.
+
+### 2.3. Arquitetura Multi-Cloud, Sistemas Legados & Assessments M&A
+- Arquitetura e sustentação evolutiva em **AWS (EKS, ECS, Lambda, SQS, SNS, DynamoDB, Aurora, RDS)**, **Oracle Cloud Infrastructure (OCI)**, **Google Cloud Platform (GCP)** e **Red Hat OpenShift / Kubernetes**.
+- Evolução e refatoração de sistemas legados de missão crítica em **PHP Orientado a Objetos (Laravel, Yii2)**, **Java**, **Node.js (NestJS)**, **React/TypeScript**, **MySQL**, **Oracle** e **SQL Server** sobre servidores **Linux**.
+- Condução de Assessments técnicos de separação societária (*carve-out* M&A) abrangendo centenas de aplicações corporativas, inventário **LeanIX**, integrações com **SAP ERP** e redes industriais **OT**, definindo blueprints e ondas de transição sob diretrizes IAM/NIST.
+
+### 2.4. Inteligência Artificial Corporativa, RAG & Produtos Digitais
+- Arquitetura de portais corporativos de IA Generativa com pipelines **RAG (Retrieval-Augmented Generation)** conectados a bases de conhecimento internas e gateways **Multi-LLM** com governança de custos e auditoria de prompts.
+- Processamento e extração local de documentos fiscais e contratos em PDF utilizando **Docling IA** combinado a conciliação automatizada no SAP.
+- Arquitetura de aplicações móveis e web multiplataforma em **Flutter (Android/iOS/Web)** desacopladas de ERPs legados via APIs RESTful e autenticação OIDC.
+
+---
+
+## 3. Experiência Profissional Cronológica
+
+### Líder Técnico · Global Hitss Brasil (Out 2024 – Atual)
+- Direção técnica de Torre de RPA e squads multidisciplinares em projetos corporativos e BPO, conduzindo dailies, revisões arquiteturais, especificações funcionais, estimativas técnicas (HLE/PCV) e entrevistas técnicas.
+- Arquitetura de automações híbridas e microsserviços em Python (FastAPI, Selenium, UIA), Macro Manager (C#), UiPath, Automation 360, IBM RPA e Power Automate com Docker, Nginx, RabbitMQ e Redis.
+- Implementação de esteiras DevSecOps com Jenkins Workers em Docker, GitLab CI, Keycloak (OAuth2/OIDC) e observabilidade com Grafana, Prometheus, Loki e OpenTelemetry.
+- Liderança técnica de projetos Multi-Cloud (AWS, OCI, OpenShift), Assessments de M&A, modernização de sistemas legados e plataformas corporativas de IA Generativa, RAG, Docling IA e Flutter.
+
+### Desenvolvedor PHP Pleno & Líder Técnico de Entregas · Global Hitss Brasil (Jul 2021 – Nov 2024)
+- Liderança técnica na sustentação e evolução de plataformas web e legadas críticas de telecomunicações (Claro TI & Embratel) em PHP (Laravel, Yii2), Node.js, React/TypeScript, MySQL, Oracle e SQL Server em servidores Linux na AWS.
+- Migrações estruturais entre bancos de dados de alto volume, otimização de queries SQL complexas, automação de rotinas operacionais e construção de dashboards executivos de BI.
+
+### Desenvolvedor PHP Técnico · Global Hitss Brasil (Jan 2020 – Jul 2021)
+- Desenvolvimento full stack e sustentação de sistemas internos (Claro) em PHP OO, Laravel, Yii2, JavaScript, MySQL e SQL Server em servidores Linux/AWS.
+
+### Desenvolvedor de Software · FIAP, INJOY Travel & ALESP (2017 – Jan 2022)
+- **FIAP (Jul 2021 – Jan 2022):** Evolução de plataforma Moodle (PHP), APIs RESTful, testes unitários automatizados, ferramentas CLI em Node.js, arquitetura MVC, SQL Server e governança com SonarQube.
+- **INJOY Travel (2019 – 2020):** Aplicações web de turismo e reservas em PHP OO na AWS com MySQL.
+- **ALESP (2017):** Suporte técnico e manutenção de sistemas internos na Assembleia Legislativa do Estado de São Paulo.
+
+---
+
+## 4. Formação Acadêmica, Certificações Verificadas & Prêmios
+
+### Formação Acadêmica
+- **Tecnólogo em Análise e Desenvolvimento de Sistemas** — FATEC Ipiranga (Centro Paula Souza), 2018 – 2020.
+- **Técnico em Programação e Manutenção de Computadores** — ETEC Jaraguá (Centro Paula Souza), 2016 – 2017.
+
+### Certificações e Extensões Universitárias (14 Credenciais)
+1. **Microsoft — Foundry Agentic Engineer** (Microsoft / DIO Certification · Set 2026 · 6h)
+2. **IBM Bob: IA de Nível Empresarial para Desenvolvedores e Tech Leaders** (IBM / DIO Certification · Ago 2026 · 15h)
+3. **Google Cloud Fundamentals: Core Infrastructure** (Google Cloud Skills · Ago 2022)
+4. **Infrastructure and Application Modernization with Google Cloud** (Google Cloud Skills · Jul 2022)
+5. **Innovating with Data and Google Cloud** (Google Cloud Skills · Jul 2022)
+6. **Cloud Hero BigQuery Skills** (Google Cloud Skills · Jul 2022)
+7. **Introduction to Digital Transformation with Google Cloud** (Google Cloud Skills · Jul 2022)
+8. **Técnicas de Negociação** (PUCRS · Escola de Direito · Set 2025 · 10h)
+9. **Gestão de Crise** (PUCRS · Escola de Negócios · Ago 2025 · 10h)
+10. **Mentoria e Coaching de Equipes: Desenvolvimento Tailor-Made (Lean/VSM)** (PUCRS · Escola de Negócios · Ago 2025 · 10h)
+11. **Indústria 4.0** (PUCRS · Escola Politécnica · Mar 2024 · 10h)
+12. **Introduction to Internet of Things (IoT)** (Cisco Networking Academy · Jul 2022)
+
+### Prêmios e Reconhecimentos
+- **Campeão Regional · Hackathon InterFatec 2022** (1º Lugar Regional)
+- **Campeão · Hackathon Interno FATEC Ipiranga** (1º Lugar Geral)
+- **Vice-Campeão · Challenge BigQuery** (Google & Claro Brasil)
+- **Aluno Destaque 2022 & TCC Prata da Casa** (FATEC Ipiranga)

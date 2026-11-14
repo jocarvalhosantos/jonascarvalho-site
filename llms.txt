@@ -1,0 +1,27 @@
+# Jonas Carvalho — Líder Técnico (Arquitetura de Software, RPA, DevOps & IA)
+
+> Portfólio executivo, credenciais verificadas e currículo técnico de Jonas Carvalho, Líder Técnico baseado em São Paulo, SP, Brasil, com mais de 8 anos de experiência na construção e modernização de sistemas críticos, gestão de Torre de RPA, DevSecOps (Jenkins Workers & GitLab CI), Multi-Cloud (AWS, OCI, GCP, OpenShift), Assessments de M&A e plataformas de IA Generativa.
+
+## Páginas Principais e Recursos Oficiais
+
+- [Portfólio Principal](https://jonas.novashift.com.br/): Visão executiva, ecossistema técnico de 30+ tecnologias, 4 pilares de atuação, 9 estudos de caso de arquitetura, matriz comparativa, glossário técnico, FAQ e canais de contato.
+- [Certificações, Diplomas & Prêmios](https://jonas.novashift.com.br/certificacoes.html): 14 credenciais verificadas (Microsoft Foundry Agentic Engineer, IBM Bob AI, 5 badges Google Cloud, 4 extensões PUCRS, Cisco NetAcad IoT, diplomas FATEC/ETEC) e 4 prêmios em hackathons.
+- [Currículo Online A4](https://jonas.novashift.com.br/curriculo.html): Versão web diagramada em 2 páginas A4 com histórico profissional completo, stack e arquiteturas entregues.
+- [Currículo Oficial em PDF](https://jonas.novashift.com.br/Jonas-Carvalho-CV.pdf): Documento A4 em PDF pronto para download direto.
+- [Documentação Completa para LLMs](https://jonas.novashift.com.br/llms-full.txt): Dossiê técnico integral para ingestão por motores de busca generativos (GEO) e agentes de IA.
+
+## Resumo de Competências
+
+- **RPA & Automação Distribuída:** Python (FastAPI, Selenium Headless, PyAutoGUI/UIA), Macro Manager (C#/.NET), UiPath, Automation 360, IBM RPA, Power Automate, arquitetura de RPA em microsserviços Docker.
+- **DevOps, CI/CD & Observabilidade:** Jenkins (controladores e agentes/workers efêmeros em Docker), GitLab CI, Docker Compose, Kubernetes, Red Hat OpenShift, Nginx, Keycloak (OAuth 2.0 / OIDC), SonarQube, Grafana, Prometheus, Loki, OpenTelemetry.
+- **Multi-Cloud, Dados & Mensageria:** AWS (EKS, ECS, Lambda, SQS, SNS, DynamoDB, Aurora, RDS), Oracle Cloud (OCI), Google Cloud (GCP / BigQuery), Azure, PostgreSQL, Oracle, MySQL, SQL Server, Redis, RabbitMQ.
+- **Engenharia de Software, Legado & IA:** Node.js (NestJS/Express), React, TypeScript, PHP OO (Laravel, Yii2), Java, Flutter (Android/iOS/Web), LLMs, pipelines RAG, Multi-LLM Gateways, Docling IA.
+
+## Contato Direto
+
+- **Localização:** São Paulo, SP — Brasil
+- **E-mail:** jocarvalhosantos@gmail.com
+- **Telefone / WhatsApp:** +55 11 91533-6691
+- **LinkedIn:** https://www.linkedin.com/in/jonas-santos-b5289836/
+- **GitHub:** https://github.com/jocarvalhosantos
+- **Google Skills Profile:** https://www.skills.google/public_profiles/2552c712-2626-4c89-9953-f7259b2a91ca

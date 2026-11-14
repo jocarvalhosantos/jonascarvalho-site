@@ -1,0 +1,39 @@
+{
+  "generator": "scripts/generate-og.js",
+  "maxAllowedBytes": 286720,
+  "default": {
+    "url": "https://jonas.novashift.com.br/og-default.jpg",
+    "squareUrl": "https://jonas.novashift.com.br/og-square.jpg",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "bytes": 72396,
+    "alt": "Jonas Carvalho — Líder Técnico em Arquitetura de Software, RPA, Cloud (AWS/OCI/GCP), DevOps & IA"
+  },
+  "routes": {
+    "/": {
+      "image": "https://jonas.novashift.com.br/og-default.jpg",
+      "square": "https://jonas.novashift.com.br/og-square.jpg",
+      "width": 1200,
+      "height": 630,
+      "bytes": 72396,
+      "alt": "Jonas Carvalho — Líder Técnico em Arquitetura de Software, RPA, Cloud (AWS/OCI/GCP), DevOps & IA"
+    },
+    "/certificacoes.html": {
+      "image": "https://jonas.novashift.com.br/og-certificacoes.jpg",
+      "square": "https://jonas.novashift.com.br/og-square.jpg",
+      "width": 1200,
+      "height": 630,
+      "bytes": 78131,
+      "alt": "14 Certificações, Diplomas FATEC/ETEC, Badges Google Cloud, Microsoft Foundry AI, IBM Bob e Extensões PUCRS — Jonas Carvalho"
+    },
+    "/curriculo.html": {
+      "image": "https://jonas.novashift.com.br/og-curriculo.jpg",
+      "square": "https://jonas.novashift.com.br/og-square.jpg",
+      "width": 1200,
+      "height": 630,
+      "bytes": 73011,
+      "alt": "Currículo Executivo de Jonas Carvalho — Líder Técnico em Cloud, RPA, DevOps e Inteligência Artificial"
+    }
+  }
+}

@@ -1,0 +1,48 @@
+# robots.txt — Jonas Carvalho (https://jonas.novashift.com.br)
+# Diretivas para Motores de Busca Tradicionais e Crawlers de IA / GEO
+
+User-agent: Googlebot
+Allow: /
+Disallow: /*?utm_*
+Disallow: /*&utm_*
+Disallow: /*?fbclid=*
+Disallow: /*?gclid=*
+Disallow: /*?ref=*
+
+User-agent: Bingbot
+Allow: /
+Disallow: /*?utm_*
+Disallow: /*?fbclid=*
+Disallow: /*?gclid=*
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: *
+Allow: /
+Disallow: /scripts/
+Disallow: /*?utm_*
+Disallow: /*&utm_*
+Disallow: /*?fbclid=*
+Disallow: /*?gclid=*
+Disallow: /*?sort=*
+Disallow: /*?filter=*
+
+Host: https://jonas.novashift.com.br
+Sitemap: https://jonas.novashift.com.br/sitemap_index.xml
+Sitemap: https://jonas.novashift.com.br/sitemap.xml

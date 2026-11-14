@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+>
+  <url>
+    <loc>https://jonas.novashift.com.br/</loc>
+    <lastmod>2026-11-14T15:25:00-03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://jonas.novashift.com.br/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jonas.novashift.com.br/" />
+    <image:image>
+      <image:loc>https://jonas.novashift.com.br/og-default.jpg</image:loc>
+      <image:title>Jonas Carvalho — Líder Técnico em Arquitetura de Software, RPA, DevOps e IA</image:title>
+      <image:caption>Portfólio executivo e arquiteturas entregues por Jonas Carvalho em São Paulo, SP.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://jonas.novashift.com.br/assets/jonas-photo.jpg</image:loc>
+      <image:title>Jonas Carvalho — Líder Técnico</image:title>
+      <image:caption>Retrato profissional de Jonas Carvalho, Líder Técnico em São Paulo, Brasil.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://jonas.novashift.com.br/assets/case-rpa.jpg</image:loc>
+      <image:title>Orquestração RPA Distribuída em Cloud e Observabilidade</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://jonas.novashift.com.br/assets/case-cloud.jpg</image:loc>
+      <image:title>Plataforma Corporativa de Identidade Digital e Arquitetura Multi-Cloud</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://jonas.novashift.com.br/assets/case-legacy.jpg</image:loc>
+      <image:title>Modernização de Sistemas Legados e Assessments Técnicos M&amp;A</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://jonas.novashift.com.br/assets/case-ai.jpg</image:loc>
+      <image:title>Plataforma Corporativa de IA Generativa, RAG e Gateways Multi-LLM</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://jonas.novashift.com.br/certificacoes.html</loc>
+    <lastmod>2026-11-14T15:25:00-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://jonas.novashift.com.br/certificacoes.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jonas.novashift.com.br/certificacoes.html" />
+    <image:image>
+      <image:loc>https://jonas.novashift.com.br/og-certificacoes.jpg</image:loc>
+      <image:title>Certificações, Diplomas e Prêmios — Jonas Carvalho</image:title>
+      <image:caption>14 credenciais verificadas em Microsoft Foundry AI, IBM Bob AI, Google Cloud, PUCRS, Cisco e FATEC.</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://jonas.novashift.com.br/curriculo.html</loc>
+    <lastmod>2026-11-14T15:25:00-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://jonas.novashift.com.br/curriculo.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jonas.novashift.com.br/curriculo.html" />
+    <image:image>
+      <image:loc>https://jonas.novashift.com.br/og-curriculo.jpg</image:loc>
+      <image:title>Currículo Executivo A4 — Jonas Carvalho</image:title>
+      <image:caption>Currículo técnico completo de Jonas Carvalho em formato A4 de 2 páginas.</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://jonas.novashift.com.br/Jonas-Carvalho-CV.pdf</loc>
+    <lastmod>2026-11-14T15:25:00-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <style>
+    .bg { fill: #07080a; }
+    .ring { stroke: #3b82f6; stroke-opacity: 0.45; }
+    .txt { fill: #f8fafc; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-weight: 900; }
+    .dot { fill: #3b82f6; }
+    @media (prefers-color-scheme: light) {
+      .bg { fill: #0b0f19; }
+      .ring { stroke: #2563eb; stroke-opacity: 0.6; }
+    }
+  </style>
+  <rect class="bg" width="512" height="512" rx="112" />
+  <rect class="ring" x="16" y="16" width="480" height="480" rx="98" fill="none" stroke-width="10" />
+  <text class="txt" x="234" y="328" font-size="230" text-anchor="middle" letter-spacing="-12">JC</text>
+  <circle class="dot" cx="404" cy="306" r="30" />
+</svg>

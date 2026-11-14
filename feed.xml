@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Jonas Carvalho — Arquitetura de Software, RPA, DevOps &amp; IA</title>
+    <link>https://jonas.novashift.com.br/</link>
+    <description>Estudos de caso arquiteturais, modernização de sistemas legados, Torre de RPA, DevSecOps e certificações de Jonas Carvalho.</description>
+    <language>pt-br</language>
+    <lastBuildDate>Sat, 14 Nov 2026 15:25:00 -0300</lastBuildDate>
+    <atom:link href="https://jonas.novashift.com.br/feed.xml" rel="self" type="application/rss+xml" />
+
+    <item>
+      <title>Portfólio de Arquitetura: Identidade Digital, RPA Distribuído, DevSecOps &amp; IA Generativa</title>
+      <link>https://jonas.novashift.com.br/#casos</link>
+      <guid isPermaLink="true">https://jonas.novashift.com.br/#casos</guid>
+      <pubDate>Sat, 14 Nov 2026 15:00:00 -0300</pubDate>
+      <dc:creator>Jonas Carvalho</dc:creator>
+      <description>9 arquiteturas corporativas entregues em AWS, OCI, GCP e OpenShift, cobrindo SSO em larga escala, orquestração RPA com Jenkins Workers, Assessments de M&amp;A e plataformas RAG Multi-LLM.</description>
+    </item>
+
+    <item>
+      <title>14 Certificações Verificadas, Diplomas &amp; Extensões Universitárias PUCRS</title>
+      <link>https://jonas.novashift.com.br/certificacoes.html</link>
+      <guid isPermaLink="true">https://jonas.novashift.com.br/certificacoes.html</guid>
+      <pubDate>Sat, 14 Nov 2026 14:30:00 -0300</pubDate>
+      <dc:creator>Jonas Carvalho</dc:creator>
+      <description>Credenciais oficiais Microsoft Foundry Agentic Engineer, IBM Bob AI, 5 Badges Google Cloud Skills, 4 Extensões PUCRS, Cisco NetAcad IoT e formação FATEC/ETEC.</description>
+    </item>
+
+    <item>
+      <title>Currículo Executivo A4 (2 Páginas) — Jonas Carvalho</title>
+      <link>https://jonas.novashift.com.br/curriculo.html</link>
+      <guid isPermaLink="true">https://jonas.novashift.com.br/curriculo.html</guid>
+      <pubDate>Sat, 14 Nov 2026 14:00:00 -0300</pubDate>
+      <dc:creator>Jonas Carvalho</dc:creator>
+      <description>Currículo técnico atualizado com 8+ anos de experiência em liderança técnica, arquitetura de software, RPA, DevOps e sistemas críticos, disponível online e em PDF.</description>
+    </item>
+  </channel>
+</rss>
