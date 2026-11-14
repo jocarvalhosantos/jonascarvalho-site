@@ -1667,3 +1667,165 @@ address.footer-nap a:hover {
     grid-template-columns: 1fr;
   }
 }
+
+/* ============================================================
+   LANGUAGE SWITCHER (PT | EN)
+   ============================================================ */
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+  padding: 2px;
+  gap: 2px;
+}
+
+.lang-btn {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: var(--text-muted);
+  font-family: "Geist Mono", monospace;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 5px 9px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.lang-btn:hover {
+  color: #ffffff;
+}
+
+.lang-btn.active {
+  background: var(--accent);
+  color: #ffffff;
+  box-shadow: 0 2px 10px rgba(59, 130, 246, 0.45);
+}
+
+/* ============================================================
+   COMPACT GEO TABS (TABELA / FAQ / PILARES)
+   ============================================================ */
+.geo-tabs {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 5px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  margin-bottom: 18px;
+}
+
+.geo-tab-btn {
+  appearance: none;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--text-muted);
+  font-family: "Geist", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.geo-tab-btn:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.geo-tab-btn.active {
+  background: rgba(59, 130, 246, 0.16);
+  border-color: rgba(59, 130, 246, 0.48);
+  color: #dbeafe;
+}
+
+.geo-tab-panel {
+  display: none;
+}
+
+.geo-tab-panel.active {
+  display: block;
+}
+
+.geo-tab-panel .arch-table-wrap,
+.geo-tab-panel .tech-glossary,
+.geo-tab-panel .faq-list {
+  margin-top: 0;
+}
+
+/* ============================================================
+   MODAL VISUAL ARCHITECTURE DIAGRAM (SVG + PIPELINE)
+   ============================================================ */
+.arch-diagram-box {
+  background:
+    radial-gradient(circle at 85% 20%, rgba(59, 130, 246, 0.14), transparent 55%),
+    rgba(7, 9, 14, 0.85);
+  border: 1px solid rgba(59, 130, 246, 0.32);
+  border-radius: 12px;
+  padding: 16px;
+  margin-top: 8px;
+}
+
+.arch-flow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+  gap: 10px;
+  align-items: stretch;
+}
+
+.arch-node {
+  position: relative;
+  background: rgba(18, 24, 38, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-top: 2.5px solid var(--accent);
+  border-radius: 10px;
+  padding: 10px 11px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.arch-node-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.arch-node-step {
+  font-family: "Geist Mono", monospace;
+  font-size: 10px;
+  font-weight: 600;
+  color: #60a5fa;
+  background: rgba(59, 130, 246, 0.14);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.arch-node-arrow {
+  color: #3b82f6;
+  font-family: "Geist Mono", monospace;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.arch-node-title {
+  font-family: "Archivo", sans-serif;
+  font-size: 12.5px;
+  font-weight: 800;
+  color: #f8fafc;
+  line-height: 1.25;
+}
+
+.arch-node-sub {
+  font-family: "Geist Mono", monospace;
+  font-size: 10.5px;
+  color: #94a3b8;
+  line-height: 1.3;
+}

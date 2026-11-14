@@ -8,9 +8,11 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY index.html /usr/share/nginx/html/index.html
 COPY certificacoes.html /usr/share/nginx/html/certificacoes.html
 COPY curriculo.html /usr/share/nginx/html/curriculo.html
+COPY curriculo-en.html /usr/share/nginx/html/curriculo-en.html
 COPY styles.css /usr/share/nginx/html/styles.css
 COPY script.js /usr/share/nginx/html/script.js
 COPY Jonas-Carvalho-CV.pdf /usr/share/nginx/html/Jonas-Carvalho-CV.pdf
+COPY Jonas-Carvalho-Resume-EN.pdf /usr/share/nginx/html/Jonas-Carvalho-Resume-EN.pdf
 
 # Protocolos Raiz de SEO, GEO/LLMs, Sitemaps, RSS, PWA e IndexNow
 COPY robots.txt /usr/share/nginx/html/robots.txt

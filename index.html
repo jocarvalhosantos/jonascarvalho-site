@@ -390,8 +390,12 @@
       </nav>
 
       <div class="nav-actions">
-        <a href="curriculo.html" class="btn btn-ghost btn-sm">Ver Currículo</a>
-        <a href="Jonas-Carvalho-CV.pdf" download="Jonas-Carvalho-CV.pdf" class="btn btn-primary btn-sm">Baixar PDF ↓</a>
+        <div class="lang-switch" role="group" aria-label="Idioma / Language">
+          <button type="button" class="lang-btn active" data-lang="pt">PT</button>
+          <button type="button" class="lang-btn" data-lang="en">EN</button>
+        </div>
+        <a href="curriculo.html" id="navViewCvBtn" class="btn btn-ghost btn-sm">Ver Currículo</a>
+        <a href="Jonas-Carvalho-CV.pdf" id="navDownloadPdfBtn" download="Jonas-Carvalho-CV.pdf" class="btn btn-primary btn-sm">Baixar PDF ↓</a>
         <button type="button" class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
       </div>
     </div>
@@ -961,15 +965,22 @@
     <div class="container">
       <div class="section-header">
         <div>
-          <span class="section-kicker">(03.B) Engenharia &amp; Decisões Arquiteturais</span>
-          <h2 class="section-title" id="geo-heading">Matriz de modernização, especificações e perguntas frequentes</h2>
+          <span class="section-kicker" id="geoKicker">(03.B) Engenharia &amp; Decisões Arquiteturais</span>
+          <h2 class="section-title" id="geo-heading">Raio-X técnico, comparativo e perguntas frequentes</h2>
         </div>
-        <p class="section-sub">
-          Comparativo técnico entre parques legados tradicionais e as arquiteturas distribuídas em Cloud, RPA e IA implementadas em produção.
+        <p class="section-sub" id="geoSub">
+          Selecione uma aba abaixo para alternar entre a matriz comparativa (Legado vs. Moderno), perguntas frequentes e pilares de engenharia.
         </p>
       </div>
 
-      <!-- Tabela Semântica Comparativa -->
+      <div class="geo-tabs" role="tablist" aria-label="Visões de arquitetura e FAQ">
+        <button type="button" class="geo-tab-btn active" role="tab" aria-selected="true" data-geotab="matrix" id="geoTabMatrix">Matriz Legado vs. Moderno</button>
+        <button type="button" class="geo-tab-btn" role="tab" aria-selected="false" data-geotab="faq" id="geoTabFaq">Perguntas Frequentes (FAQ)</button>
+        <button type="button" class="geo-tab-btn" role="tab" aria-selected="false" data-geotab="pillars" id="geoTabPillars">Pilares &amp; Especificações</button>
+      </div>
+
+      <!-- ABA 1: Tabela Semântica Comparativa -->
+      <div class="geo-tab-panel active" data-geopanel="matrix">
       <div class="arch-table-wrap">
         <table class="arch-table">
           <caption>Comparativo de Engenharia: Operação Legada vs. Arquitetura Distribuída (Cloud, Torre RPA, DevSecOps &amp; IA)</caption>
@@ -1015,8 +1026,10 @@
           </tbody>
         </table>
       </div>
+      </div>
 
-      <!-- Glossário / Especificações Técnicas (<dl>) -->
+      <!-- ABA 3: Glossário / Especificações Técnicas (<dl>) -->
+      <div class="geo-tab-panel" data-geopanel="pillars">
       <dl class="tech-glossary" aria-label="Especificações e pilares técnicos">
         <div class="glossary-card">
           <dt><dfn>Torre de RPA &amp; Hiperautomação</dfn></dt>
@@ -1031,8 +1044,10 @@
           <dd>Engenharia de plataformas internas de IA baseadas em <span translate="no">Microsoft Foundry, IBM Bob, OpenAI e Gemini</span> com recuperação semântica (<abbr title="Retrieval-Augmented Generation">RAG</abbr>) sobre bases documentais e controle de acesso por perfil.</dd>
         </div>
       </dl>
+      </div>
 
-      <!-- FAQ Nativo (<details> / <summary>) no DOM inicial -->
+      <!-- ABA 2: FAQ Nativo (<details> / <summary>) no DOM inicial -->
+      <div class="geo-tab-panel" data-geopanel="faq">
       <div class="faq-list" role="region" aria-label="Perguntas frequentes sobre atuação técnica e arquitetura">
         <details class="faq-item" open>
           <summary>Qual é a especialidade principal de Jonas Carvalho como Líder Técnico?</summary>
@@ -1061,6 +1076,7 @@
             O processo de Assessment Técnico (Technical Due Diligence) avalia de ponta a ponta o parque de aplicações, bancos de dados, automações RPA, integrações com ERPs (<span translate="no">SAP/Oracle</span>) e redes industriais (IT/OT), mapeando riscos de segurança IAM (alinhados ao <span translate="no">NIST</span> e <span translate="no">ISO 27001</span>), dependências de licenciamento e dívida técnica para entregar um roadmap executivo de transição sem indisponibilidade operacional.
           </div>
         </details>
+      </div>
       </div>
     </div>
   </section>
@@ -1266,7 +1282,11 @@
         <button type="button" class="modal-close" id="modalClose" aria-label="Fechar janela">✕</button>
       </div>
       <div class="modal-block">
-        <h4>Contexto</h4>
+        <h4 id="modalDiagramHeading">Fluxo Visual da Arquitetura</h4>
+        <div class="arch-diagram-box" id="modalDiagram"></div>
+      </div>
+      <div class="modal-block">
+        <h4 id="modalContextHeading">Contexto</h4>
         <p id="modalContext"></p>
       </div>
       <div class="modal-block">

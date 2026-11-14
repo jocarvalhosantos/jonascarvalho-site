@@ -428,6 +428,142 @@
         grid-template-columns: repeat(2, 1fr);
       }
     }
+
+    .cert-foot-actions {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn-preview-cert {
+      appearance: none;
+      border: 1px solid rgba(59, 130, 246, 0.42);
+      background: rgba(59, 130, 246, 0.14);
+      color: #dbeafe;
+      font-family: 'Geist Mono', monospace;
+      font-size: 0.74rem;
+      font-weight: 600;
+      padding: 5px 11px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all 0.18s ease;
+    }
+
+    .btn-preview-cert:hover {
+      background: #2563eb;
+      border-color: #3b82f6;
+      color: #ffffff;
+    }
+
+    /* Certificate Document Sheet inside Lightbox Modal */
+    .cert-doc-sheet {
+      background:
+        radial-gradient(circle at 85% 15%, rgba(59, 130, 246, 0.16), transparent 55%),
+        linear-gradient(145deg, #0d1322 0%, #070a12 100%);
+      border: 2px solid rgba(59, 130, 246, 0.45);
+      border-radius: 16px;
+      padding: 26px 28px;
+      position: relative;
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+      margin-bottom: 18px;
+    }
+
+    .cert-doc-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      margin-bottom: 18px;
+    }
+
+    .cert-doc-issuer {
+      font-family: 'Geist Mono', monospace;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #93c5fd;
+    }
+
+    .cert-doc-seal {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(52, 211, 153, 0.12);
+      border: 1px solid rgba(52, 211, 153, 0.38);
+      font-family: 'Geist Mono', monospace;
+      font-size: 0.72rem;
+      color: #a7f3d0;
+    }
+
+    .cert-doc-confer {
+      font-size: 0.82rem;
+      color: #94a3b8;
+      margin-bottom: 4px;
+    }
+
+    .cert-doc-holder {
+      font-family: 'Archivo', sans-serif;
+      font-size: 1.45rem;
+      font-weight: 900;
+      color: #ffffff;
+      letter-spacing: -0.02em;
+      margin-bottom: 10px;
+    }
+
+    .cert-doc-course {
+      font-family: 'Archivo', sans-serif;
+      font-size: 1.18rem;
+      font-weight: 800;
+      color: #60a5fa;
+      line-height: 1.3;
+      margin-bottom: 14px;
+    }
+
+    .cert-doc-meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 16px;
+      font-family: 'Geist Mono', monospace;
+      font-size: 0.76rem;
+      color: #cbd5e1;
+    }
+
+    .cert-doc-meta-row span {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    .cert-lgpd-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 10px 14px;
+      border-radius: 10px;
+      background: rgba(245, 158, 11, 0.09);
+      border: 1px dashed rgba(245, 158, 11, 0.45);
+      font-family: 'Geist Mono', monospace;
+      font-size: 0.73rem;
+      color: #fde68a;
+    }
+
+    .cert-lgpd-mask {
+      background: #05070b;
+      color: #64748b;
+      padding: 2px 8px;
+      border-radius: 4px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      letter-spacing: 0.08em;
+    }
   </style>
 </head>
 <body>
@@ -445,8 +581,12 @@
         <a href="index.html#contato">Contato</a>
       </nav>
       <div class="nav-actions">
-        <a class="btn btn-ghost btn-sm" href="curriculo.html" target="_blank" rel="noopener">Ver Currículo</a>
-        <a class="btn btn-primary btn-sm" href="Jonas-Carvalho-CV.pdf" download="Jonas-Carvalho-CV.pdf">Baixar PDF ↓</a>
+        <div class="lang-switch" role="group" aria-label="Idioma / Language">
+          <button type="button" class="lang-btn active" data-lang="pt">PT</button>
+          <button type="button" class="lang-btn" data-lang="en">EN</button>
+        </div>
+        <a class="btn btn-ghost btn-sm" id="navViewCvBtn" href="curriculo.html" target="_blank" rel="noopener">Ver Currículo</a>
+        <a class="btn btn-primary btn-sm" id="navDownloadPdfBtn" href="Jonas-Carvalho-CV.pdf" download="Jonas-Carvalho-CV.pdf">Baixar PDF ↓</a>
         <button class="nav-toggle" id="navToggle" type="button" aria-label="Abrir menu" aria-expanded="false">☰</button>
       </div>
     </div>
@@ -897,8 +1037,159 @@
     </div>
   </footer>
 
+  <!-- MODAL VISUALIZADOR DE CERTIFICADO / DIPLOMA (COM PROTEÇÃO LGPD) -->
+  <div class="modal-backdrop" id="certPreviewModal" role="dialog" aria-modal="true" aria-labelledby="certModalTitle" data-nosnippet>
+    <div class="modal-dialog">
+      <div class="modal-head">
+        <div>
+          <span class="section-kicker" id="certModalKicker" style="margin-bottom: 4px;">Credencial Verificada</span>
+          <h3 id="certModalTitle" style="font-family: Archivo, sans-serif; font-size: 21px; font-weight: 900;"></h3>
+          <p id="certModalIssuer" class="mono" style="font-size: 12px; color: var(--text-muted); margin-top: 4px;"></p>
+        </div>
+        <button type="button" class="modal-close" id="certModalClose" aria-label="Fechar janela">✕</button>
+      </div>
+
+      <div class="cert-doc-sheet">
+        <div class="cert-doc-top">
+          <span class="cert-doc-issuer" id="certDocHeader">INSTITUIÇÃO EMISSORA</span>
+          <span class="cert-doc-seal" id="certDocSeal">✓ Documento Autêntico</span>
+        </div>
+        <p class="cert-doc-confer" id="certDocConfer">Certificamos para os devidos fins que</p>
+        <div class="cert-doc-holder">JONAS SILVA CARVALHO DOS SANTOS</div>
+        <div class="cert-doc-course" id="certDocCourse"></div>
+        <div class="cert-doc-meta-row" id="certDocMeta"></div>
+        <div class="cert-lgpd-bar">
+          <span id="certLgpdLabel">🔒 Proteção LGPD: RG, Data de Nasc. e Código de Registro ocultados na visualização pública</span>
+          <span class="cert-lgpd-mask">DOC/REG: ████████████</span>
+        </div>
+      </div>
+
+      <div class="modal-block" style="margin-bottom: 0;">
+        <h4 id="certSyllabusHeading">Ementa &amp; Competências Avaliadas</h4>
+        <div class="modal-tags" id="certModalSyllabus"></div>
+      </div>
+    </div>
+  </div>
+
   <script>
     (function () {
+      const CERT_DOCS = [
+        {
+          header: "MICROSOFT · DIGITAL INNOVATION ONE (DIO)",
+          conferPt: "Certificamos que concluiu com êxito a aceleração oficial",
+          conferEn: "This certifies the successful completion of the acceleration program",
+          metaPt: ["Emissão: 18 Set 2026", "Carga Horária: 6 horas", "Modalidade: Engenharia de IA Agêntica"],
+          metaEn: ["Issued: Sep 18, 2026", "Workload: 6 hours", "Track: Agentic AI Engineering"],
+          syllabus: ["Microsoft AI Foundry", "Arquitetura de Agentes Autônomos", "Orquestração Multi-Agente", "Tool Calling & RAG", "Governança de IA"]
+        },
+        {
+          header: "IBM · DIGITAL INNOVATION ONE (DIO)",
+          conferPt: "Certificamos que concluiu com êxito o bootcamp corporativo",
+          conferEn: "This certifies the successful completion of the enterprise bootcamp",
+          metaPt: ["Emissão: 27 Ago 2026", "Carga Horária: 15 horas", "Foco: Devs & Tech Leaders"],
+          metaEn: ["Issued: Aug 27, 2026", "Workload: 15 hours", "Focus: Devs & Tech Leaders"],
+          syllabus: ["IBM Bob Enterprise AI", "Engenharia Assistida por IA", "Liderança Técnica com LLMs", "Modernização de Código", "Automação de Testes & Arquitetura"]
+        },
+        {
+          header: "GOOGLE CLOUD · GOOGLE SKILLS BOOST",
+          conferPt: "Credencial oficial concedida por conclusão de trilha prática e laboratórios em nuvem",
+          conferEn: "Official credential awarded for completing hands-on cloud labs and assessments",
+          metaPt: ["Emissão: Ago 2022", "Tipo: Skill Badge Verificado", "Provedor: Google Cloud Platform"],
+          metaEn: ["Issued: Aug 2022", "Type: Verified Skill Badge", "Provider: Google Cloud Platform"],
+          syllabus: ["Compute Engine & VMs", "Redes VPC & Load Balancing", "Google Kubernetes Engine (GKE)", "Cloud IAM & Segurança", "Cloud Storage & SQL"]
+        },
+        {
+          header: "GOOGLE CLOUD · GOOGLE SKILLS BOOST",
+          conferPt: "Credencial oficial concedida por conclusão de trilha de modernização de aplicações",
+          conferEn: "Official credential awarded for completing application modernization track",
+          metaPt: ["Emissão: Jul 2022", "Tipo: Skill Badge Verificado", "Provedor: Google Cloud Platform"],
+          metaEn: ["Issued: Jul 2022", "Type: Verified Skill Badge", "Provider: Google Cloud Platform"],
+          syllabus: ["Modernização de Monólitos Legados", "Containers & Kubernetes", "Cloud Run & Serverless", "APIs & Apigee", "Estratégias Hybrid & Multi-Cloud"]
+        },
+        {
+          header: "GOOGLE CLOUD · GOOGLE SKILLS BOOST",
+          conferPt: "Credencial oficial concedida em engenharia de dados e inteligência analítica",
+          conferEn: "Official credential awarded in data engineering and cloud analytics",
+          metaPt: ["Emissão: Jul 2022", "Tipo: Skill Badge Verificado", "Provedor: Google Cloud Platform"],
+          metaEn: ["Issued: Jul 2022", "Type: Verified Skill Badge", "Provider: Google Cloud Platform"],
+          syllabus: ["Data Lakes & Data Warehousing", "Pipelines Analíticos", "BigQuery & Looker", "Machine Learning em Dados", "Governança de Dados"]
+        },
+        {
+          header: "GOOGLE CLOUD · CLOUD HERO BIGQUERY",
+          conferPt: "Credencial competitiva de performance prática em consultas e arquitetura BigQuery",
+          conferEn: "Competitive hands-on credential in BigQuery architecture and large-scale SQL",
+          metaPt: ["Emissão: Jul 2022", "Destaque: Vice-Campeão Challenge Google & Claro", "Tecnologia: Google BigQuery"],
+          metaEn: ["Issued: Jul 2022", "Honor: 2nd Place Google & Claro Challenge", "Technology: Google BigQuery"],
+          syllabus: ["SQL Analítico em Petabytes", "Particionamento & Clustering", "Otimização de Performance", "Ingestão Streaming", "Modelagem Dimensional"]
+        },
+        {
+          header: "GOOGLE CLOUD · GOOGLE SKILLS BOOST",
+          conferPt: "Credencial oficial em estratégia e arquitetura de transformação digital em nuvem",
+          conferEn: "Official credential in cloud digital transformation strategy and architecture",
+          metaPt: ["Emissão: Jul 2022", "Tipo: Skill Badge Verificado", "Provedor: Google Cloud Platform"],
+          metaEn: ["Issued: Jul 2022", "Type: Verified Skill Badge", "Provider: Google Cloud Platform"],
+          syllabus: ["Estratégia Cloud-First", "TCO & FinOps", "Segurança & Compliance em Nuvem", "Cultura DevOps & SRE", "Modernização de TI"]
+        },
+        {
+          header: "PONTIFÍCIA UNIVERSIDADE CATÓLICA DO RIO GRANDE DO SUL (PUCRS)",
+          conferPt: "A Pró-Reitoria de Graduação e Educação Continuada certifica a conclusão do Curso de Extensão",
+          conferEn: "The Office of Undergraduate and Continuing Education certifies completion of the Extension Course",
+          metaPt: ["Emissão: Set 2025", "Carga Horária: 10 horas-aula", "Unidade: Escola de Direito · PUCRS"],
+          metaEn: ["Issued: Sep 2025", "Workload: 10 hours", "Unit: School of Law · PUCRS"],
+          syllabus: ["Perfis de Negociação", "Separação entre Conflito e Problema", "Leitura de Contexto Executivo", "Criatividade em Negociações Complexas", "Alinhamento de Stakeholders"]
+        },
+        {
+          header: "PONTIFÍCIA UNIVERSIDADE CATÓLICA DO RIO GRANDE DO SUL (PUCRS)",
+          conferPt: "A Pró-Reitoria de Graduação e Educação Continuada certifica a conclusão do Curso de Extensão",
+          conferEn: "The Office of Undergraduate and Continuing Education certifies completion of the Extension Course",
+          metaPt: ["Emissão: 11 Ago 2025", "Carga Horária: 10 horas-aula", "Unidade: Escola de Negócios · PUCRS"],
+          metaEn: ["Issued: Aug 11, 2025", "Workload: 10 hours", "Unit: Business School · PUCRS"],
+          syllabus: ["Resiliência e Continuidade de Negócios", "Avaliação de Riscos e Planos de Contingência", "Liderança da Gestão de Crises", "Comunicação de Crise & Stakeholders", "IA Aplicada a Crises"]
+        },
+        {
+          header: "PONTIFÍCIA UNIVERSIDADE CATÓLICA DO RIO GRANDE DO SUL (PUCRS)",
+          conferPt: "A Pró-Reitoria de Graduação e Educação Continuada certifica a conclusão do Curso de Extensão",
+          conferEn: "The Office of Undergraduate and Continuing Education certifies completion of the Extension Course",
+          metaPt: ["Emissão: Ago 2025", "Carga Horária: 10 horas-aula", "Unidade: Escola de Negócios · PUCRS"],
+          metaEn: ["Issued: Aug 2025", "Workload: 10 hours", "Unit: Business School · PUCRS"],
+          syllabus: ["Gestão por Processos", "Mapeamento do Fluxo de Valor (VSM)", "Princípios Lean em Engenharia", "Mentoria Técnica de Squads", "Melhoria Contínua"]
+        },
+        {
+          header: "PONTIFÍCIA UNIVERSIDADE CATÓLICA DO RIO GRANDE DO SUL (PUCRS)",
+          conferPt: "A Pró-Reitoria de Graduação e Educação Continuada certifica a conclusão do Curso de Extensão",
+          conferEn: "The Office of Undergraduate and Continuing Education certifies completion of the Extension Course",
+          metaPt: ["Emissão: Mar 2024", "Carga Horária: 10 horas-aula", "Unidade: Escola Politécnica · PUCRS"],
+          metaEn: ["Issued: Mar 2024", "Workload: 10 hours", "Unit: Polytechnic School · PUCRS"],
+          syllabus: ["Gêmeos Digitais (Digital Twins)", "Big Data & Analytics Industrial", "Smart Manufacturing & IT/OT", "Smart Working", "Liderança na Indústria 4.0"]
+        },
+        {
+          header: "CISCO NETWORKING ACADEMY",
+          conferPt: "Certificado e Badge Oficial concedidos por conclusão do programa de Redes e IoT",
+          conferEn: "Official Certificate and Badge awarded for completing the IoT & Connected Networks track",
+          metaPt: ["Emissão: Jul 2022", "Tipo: Verified Cisco Badge", "Foco: IoT, Automação & Cibersegurança"],
+          metaEn: ["Issued: Jul 2022", "Type: Verified Cisco Badge", "Focus: IoT, Automation & Cybersecurity"],
+          syllabus: ["Arquitetura de Redes IoT", "Sensores, Atuadores & Microcontroladores", "Intent-Based Networking", "Automação & Inteligência Artificial", "Segurança em Dispositivos Conectados"]
+        },
+        {
+          header: "GOVERNO DO ESTADO DE SÃO PAULO · CENTRO PAULA SOUZA · FATEC IPIRANGA",
+          conferPt: "A Diretora da Faculdade de Tecnologia do Ipiranga confere o Grau Oficial de TECNÓLOGO em",
+          conferEn: "The Dean of the Faculty of Technology of São Paulo (FATEC Ipiranga) confers the Degree of B.TECH. in",
+          metaPt: ["Colação de Grau: 18 Jul 2020", "Diploma Registrado: Livro 37 · CPS/CESU", "Reconhecimento: Portaria CEE/GP nº 451"],
+          metaEn: ["Graduation: Jul 18, 2020", "Registered Degree: Book 37 · CPS/CESU", "Honors: Outstanding Student & Honors Thesis"],
+          syllabus: ["Engenharia de Software & Arquitetura", "Estruturas de Dados & Algoritmos", "Bancos de Dados Relacionais & NoSQL", "Redes de Computadores & Sistemas Operacionais", "Gestão de Projetos & Governança de TI"]
+        },
+        {
+          header: "GOVERNO DO ESTADO DE SÃO PAULO · CENTRO PAULA SOUZA · ETEC JARAGUÁ",
+          conferPt: "A Direção da Escola Técnica Estadual Jaraguá confere a Habilitação Profissional de",
+          conferEn: "The State Technical School (ETEC Jaraguá) confers the Technical Diploma of",
+          metaPt: ["Conclusão: 2016 – 2017", "Habilitação: Técnico em Informática", "Instituição: Centro Paula Souza"],
+          metaEn: ["Completed: 2016 – 2017", "Qualification: IT & Programming Technician", "Institution: Centro Paula Souza"],
+          syllabus: ["Lógica de Programação & POO", "Desenvolvimento Web & Desktop", "Banco de Dados SQL", "Redes Locais & Infraestrutura", "Manutenção e Arquitetura de Computadores"]
+        }
+      ];
+
+      let currentLang = localStorage.getItem('jc_lang') || 'pt';
+
       const navToggle = document.getElementById('navToggle');
       const navLinks = document.getElementById('navLinks');
       if (navToggle && navLinks) {
@@ -912,6 +1203,84 @@
       const cards = document.querySelectorAll('.cert-card');
       const countNote = document.getElementById('certCountNote');
       const total = cards.length;
+
+      // Inject "Visualizar Certificado 👁" button into each card footer
+      cards.forEach((card, idx) => {
+        const foot = card.querySelector('.cert-foot');
+        if (!foot) return;
+        const existingLink = foot.querySelector('a.cert-link');
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'btn-preview-cert';
+        btn.dataset.certIndex = String(idx);
+        btn.textContent = currentLang === 'en' ? 'View Certificate 👁' : 'Visualizar Certificado 👁';
+
+        if (existingLink) {
+          const wrap = document.createElement('div');
+          wrap.className = 'cert-foot-actions';
+          existingLink.replaceWith(wrap);
+          wrap.appendChild(btn);
+          wrap.appendChild(existingLink);
+        } else {
+          const lastSpan = foot.querySelector('span:last-child');
+          if (lastSpan && !lastSpan.classList.contains('cert-date')) {
+            lastSpan.replaceWith(btn);
+          } else {
+            foot.appendChild(btn);
+          }
+        }
+      });
+
+      // Certificate Preview Modal Logic
+      const modal = document.getElementById('certPreviewModal');
+      const modalClose = document.getElementById('certModalClose');
+      const modalTitle = document.getElementById('certModalTitle');
+      const modalIssuer = document.getElementById('certModalIssuer');
+      const docHeader = document.getElementById('certDocHeader');
+      const docConfer = document.getElementById('certDocConfer');
+      const docCourse = document.getElementById('certDocCourse');
+      const docMeta = document.getElementById('certDocMeta');
+      const modalSyllabus = document.getElementById('certModalSyllabus');
+
+      const closeCertModal = () => {
+        if (!modal) return;
+        modal.classList.remove('open');
+        document.body.style.overflow = '';
+      };
+
+      document.querySelectorAll('.btn-preview-cert').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const idx = Number(btn.dataset.certIndex || 0);
+          const card = cards[idx];
+          const doc = CERT_DOCS[idx] || CERT_DOCS[0];
+          if (!card || !modal) return;
+
+          const isEn = currentLang === 'en';
+          const title = card.querySelector('.cert-title')?.textContent || '';
+          const issuer = card.querySelector('.cert-issuer')?.textContent || '';
+
+          modalTitle.textContent = title;
+          modalIssuer.textContent = issuer;
+          docHeader.textContent = doc.header;
+          docConfer.textContent = isEn ? doc.conferEn : doc.conferPt;
+          docCourse.textContent = title;
+          docMeta.innerHTML = (isEn ? doc.metaEn : doc.metaPt).map((m) => `<span>${m}</span>`).join('');
+          modalSyllabus.innerHTML = doc.syllabus.map((s) => `<span class="tag">${s}</span>`).join('');
+
+          modal.classList.add('open');
+          document.body.style.overflow = 'hidden';
+        });
+      });
+
+      if (modalClose) modalClose.addEventListener('click', closeCertModal);
+      if (modal) {
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) closeCertModal();
+        });
+      }
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeCertModal();
+      });
 
       buttons.forEach((btn) => {
         btn.addEventListener('click', () => {
@@ -927,10 +1296,58 @@
           });
 
           if (countNote) {
-            countNote.textContent = `Exibindo ${visible} de ${total} credenciais`;
+            countNote.textContent =
+              currentLang === 'en'
+                ? `Showing ${visible} of ${total} credentials`
+                : `Exibindo ${visible} de ${total} credenciais`;
           }
         });
       });
+
+      // Language Switcher (PT | EN)
+      const applyCertLang = (lang) => {
+        currentLang = lang === 'en' ? 'en' : 'pt';
+        localStorage.setItem('jc_lang', currentLang);
+        const isEn = currentLang === 'en';
+
+        document.querySelectorAll('.lang-btn').forEach((b) => {
+          b.classList.toggle('active', b.dataset.lang === currentLang);
+        });
+
+        const cvHref = isEn ? 'curriculo-en.html' : 'curriculo.html';
+        const pdfHref = isEn ? 'Jonas-Carvalho-Resume-EN.pdf' : 'Jonas-Carvalho-CV.pdf';
+
+        const navViewCv = document.getElementById('navViewCvBtn');
+        if (navViewCv) {
+          navViewCv.href = cvHref;
+          navViewCv.textContent = isEn ? 'View Resume' : 'Ver Currículo';
+        }
+        const navDlPdf = document.getElementById('navDownloadPdfBtn');
+        if (navDlPdf) {
+          navDlPdf.href = pdfHref;
+          navDlPdf.setAttribute('download', pdfHref);
+          navDlPdf.textContent = isEn ? 'Download PDF (EN) ↓' : 'Baixar PDF ↓';
+        }
+
+        const h1 = document.querySelector('.cert-hero h1');
+        if (h1) h1.textContent = isEn ? 'Certifications, Academic Degrees & Executive Training' : 'Certificações, Diplomas & Formação Executiva';
+
+        document.querySelectorAll('.btn-preview-cert').forEach((b) => {
+          b.textContent = isEn ? 'View Certificate 👁' : 'Visualizar Certificado 👁';
+        });
+
+        const lgpdLabel = document.getElementById('certLgpdLabel');
+        if (lgpdLabel) {
+          lgpdLabel.textContent = isEn
+            ? '🔒 LGPD Privacy: National ID, Birth Date & Registry Code masked in public view'
+            : '🔒 Proteção LGPD: RG, Data de Nasc. e Código de Registro ocultados na visualização pública';
+        }
+      };
+
+      document.querySelectorAll('.lang-btn').forEach((b) => {
+        b.addEventListener('click', () => applyCertLang(b.dataset.lang));
+      });
+      if (currentLang === 'en') applyCertLang('en');
     })();
   </script>
 </body>

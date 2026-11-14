@@ -197,22 +197,67 @@
     .sidebar {
       background: var(--sidebar-bg);
       color: #f8fafc;
-      padding: 15px 14px 12px;
+      padding: 13px 13px 10px;
       display: flex;
       flex-direction: column;
-      gap: 9.5px;
+      gap: 7.5px;
       border-right: 1px solid #1e293b;
     }
 
     .photo-box {
-      width: 116px;
-      height: 122px;
-      margin: 0 auto 2px;
+      width: 108px;
+      height: 110px;
+      margin: 0 auto 1px;
       border-radius: 12px;
       overflow: hidden;
       border: 2px solid rgba(59, 130, 246, 0.45);
       background: #111827;
       box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+    }
+
+    .qr-verify-box {
+      margin-top: auto;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 8px;
+      border-radius: 7px;
+      background: rgba(59, 130, 246, 0.11);
+      border: 1px solid rgba(59, 130, 246, 0.36);
+      text-decoration: none;
+      color: #f8fafc;
+    }
+
+    .qr-verify-box img {
+      width: 44px;
+      height: 44px;
+      border-radius: 4px;
+      background: #ffffff;
+      padding: 2px;
+      flex-shrink: 0;
+      display: block;
+    }
+
+    .qr-verify-text {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5px;
+    }
+
+    .qr-verify-text strong {
+      font-family: "Archivo", sans-serif;
+      font-size: 8.2px;
+      font-weight: 800;
+      color: #93c5fd;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .qr-verify-text span {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 7.5px;
+      color: #e2e8f0;
+      line-height: 1.25;
     }
 
     .photo-box img {
@@ -781,8 +826,9 @@
     </div>
     <div class="cv-toolbar-actions">
       <a href="index.html" class="btn-tool">← Voltar ao Portfólio</a>
+      <a href="curriculo-en.html" class="btn-tool">🇺🇸 English Version (EN)</a>
       <a href="Jonas-Carvalho-CV.pdf" target="_blank" rel="noopener" class="btn-tool">Abrir PDF ↗</a>
-      <a href="Jonas-Carvalho-CV.pdf" download="Jonas-Carvalho-CV.pdf" class="btn-tool primary">Baixar PDF Oficial ↓</a>
+      <a href="Jonas-Carvalho-CV.pdf" download="Jonas-Carvalho-CV.pdf" class="btn-tool primary">Baixar PDF Oficial (PT) ↓</a>
       <button type="button" class="btn-tool btn-print-desktop" onclick="window.print()">Imprimir</button>
     </div>
   </div>
@@ -899,6 +945,15 @@
           </li>
         </ul>
       </section>
+
+      <a href="https://jonas.novashift.com.br" target="_blank" rel="noopener" class="qr-verify-box">
+        <img src="assets/qr-portfolio.svg" alt="QR Code Portfólio Jonas Carvalho" />
+        <div class="qr-verify-text">
+          <strong>Portfólio &amp; 14 Certificações</strong>
+          <span>jonas.novashift.com.br</span>
+          <span>Aponte a câmera ou clique ↗</span>
+        </div>
+      </a>
     </aside>
 
     <div class="main">
