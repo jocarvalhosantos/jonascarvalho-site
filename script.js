@@ -600,6 +600,16 @@ document.addEventListener("DOMContentLoaded", () => {
       '<i class="status-dot"></i>Líder Técnico · Global Hitss Brasil',
       '<i class="status-dot"></i>Technical Lead · Global Hitss Brazil'
     );
+    setText(
+      "#photoBadgeRole",
+      "Líder Técnico · Global Hitss Brasil",
+      "Technical Lead · Global Hitss Brazil"
+    );
+    setText(
+      "#photoBadgeSub",
+      "Arquitetura Cloud, RPA, DevOps & IA",
+      "Cloud, RPA, DevOps & AI Architecture"
+    );
     setHtml(
       "#hero-heading",
       'Do sistema <span class="accent">legado</span> à arquitetura em <span class="accent">RPA, Cloud &amp; IA</span>.',
@@ -607,8 +617,8 @@ document.addEventListener("DOMContentLoaded", () => {
     );
     setHtml(
       ".hero-lede",
-      'Mais de 8 anos liderando squads multidisciplinares, Torre de <abbr title="Robotic Process Automation">RPA</abbr>, esteiras <span translate="no">Jenkins/GitLab</span>, Assessments corporativos (<abbr title="Mergers and Acquisitions">M&amp;A</abbr>) e modernização de sistemas críticos em <abbr title="Amazon Web Services">AWS</abbr>, <abbr title="Oracle Cloud Infrastructure">OCI</abbr> e <abbr title="Google Cloud Platform">GCP</abbr>.',
-      '8+ years leading multidisciplinary engineering squads, an enterprise <abbr title="Robotic Process Automation">RPA</abbr> Tower, <span translate="no">Jenkins/GitLab</span> pipelines, <abbr title="Mergers and Acquisitions">M&amp;A</abbr> Technical Assessments, and mission-critical systems on <abbr title="Amazon Web Services">AWS</abbr>, <abbr title="Oracle Cloud Infrastructure">OCI</abbr>, and <abbr title="Google Cloud Platform">GCP</abbr>.'
+      'Mais de 8 anos liderando squads multidisciplinares, Torre de RPA, esteiras <span translate="no">Jenkins/GitLab</span>, Assessments corporativos (M&amp;A) e modernização de sistemas críticos em <span translate="no">AWS, OCI e GCP</span>.',
+      '8+ years leading multidisciplinary engineering squads, an enterprise RPA Tower, <span translate="no">Jenkins/GitLab</span> pipelines, M&amp;A Technical Assessments, and mission-critical systems on <span translate="no">AWS, OCI, and GCP</span>.'
     );
 
     const heroCtas = document.querySelectorAll(".hero-ctas a");

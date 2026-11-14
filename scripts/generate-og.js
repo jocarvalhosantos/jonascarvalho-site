@@ -109,9 +109,9 @@ function ogTemplate({ badge, titleMain, titleAccent, subtitle, pills, footerUrl 
     gap: 10px;
     padding: 7px 16px;
     border-radius: 999px;
-    background: rgba(52, 211, 153, 0.12);
-    border: 1px solid rgba(52, 211, 153, 0.35);
-    color: #a7f3d0;
+    background: rgba(59, 130, 246, 0.16);
+    border: 1px solid rgba(59, 130, 246, 0.45);
+    color: #dbeafe;
     font-family: 'Geist Mono', monospace;
     font-size: 15px;
     font-weight: 600;
@@ -121,7 +121,7 @@ function ogTemplate({ badge, titleMain, titleAccent, subtitle, pills, footerUrl 
     width: 9px;
     height: 9px;
     border-radius: 50%;
-    background: #34d399;
+    background: #60a5fa;
   }
   h1 {
     font-family: 'Archivo', sans-serif;
