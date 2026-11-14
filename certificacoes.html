@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Certificações, Diplomas &amp; Prêmios — Jonas Carvalho</title>
+  <meta name="description" content="Certificações oficiais, extensões universitárias PUCRS, formação acadêmica FATEC/ETEC, badges Google Cloud, Cisco, Microsoft e IBM de Jonas Carvalho." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2307080a'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial,sans-serif' font-weight='900' font-size='28' fill='%23ffffff'%3EJC%3Ctspan fill='%233b82f6'%3E.%3C/tspan%3E%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Geist+Mono:wght@400;500;600&family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .cert-hero {
+      padding: 120px 0 48px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      background:
+        radial-gradient(circle at 15% 0%, rgba(59, 130, 246, 0.14), transparent 46%),
+        radial-gradient(circle at 85% 20%, rgba(37, 99, 235, 0.08), transparent 40%);
+    }
+    .cert-hero-top {
+      display: grid;
+      grid-template-columns: 1.3fr 0.9fr;
+      gap: 36px;
+      align-items: end;
+    }
+    .cert-hero h1 {
+      font-family: 'Archivo', sans-serif;
+      font-size: clamp(2rem, 4vw, 3.1rem);
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      margin: 12px 0 16px;
+      color: #f8fafc;
+    }
+    .cert-hero-lead {
+      color: #a1aab8;
+      font-size: 1.03rem;
+      line-height: 1.65;
+      max-width: 64ch;
+      margin: 0 0 24px;
+    }
+    .cert-hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .cert-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+    .cert-stat-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      border-radius: 14px;
+      padding: 18px 20px;
+    }
+    .cert-stat-card strong {
+      display: block;
+      font-family: 'Archivo', sans-serif;
+      font-size: 1.85rem;
+      font-weight: 700;
+      color: #f8fafc;
+      line-height: 1.1;
+    }
+    .cert-stat-card span {
+      display: block;
+      margin-top: 6px;
+      font-size: 0.84rem;
+      color: #94a3b8;
+    }
+    .issuers-bar {
+      margin-top: 34px;
+      padding-top: 22px;
+      border-top: 1px solid rgba(255, 255, 255, 0.07);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px 24px;
+    }
+    .issuers-label {
+      font-family: 'Geist Mono', monospace;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #64748b;
+    }
+    .issuer-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 13px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.035);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #dbe4f0;
+    }
+    .issuer-pill img,
+    .issuer-pill svg {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+    }
+
+    .cert-section {
+      padding: 56px 0;
+      scroll-margin-top: 84px;
+    }
+    .cert-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+    .cert-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .cert-filter-btn {
+      appearance: none;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.03);
+      color: #cbd5e1;
+      padding: 9px 15px;
+      border-radius: 999px;
+      font-family: 'Geist', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .cert-filter-btn:hover {
+      border-color: rgba(59, 130, 246, 0.5);
+      color: #fff;
+    }
+    .cert-filter-btn.is-active {
+      background: #3b82f6;
+      border-color: #3b82f6;
+      color: #ffffff;
+    }
+    .cert-count-note {
+      font-family: 'Geist Mono', monospace;
+      font-size: 0.8rem;
+      color: #94a3b8;
+    }
+
+    .certs-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+    .cert-card {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.036), rgba(255, 255, 255, 0.015));
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      border-radius: 16px;
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 18px;
+      transition: transform 0.22s ease, border-color 0.22s ease, background 0.22s ease;
+    }
+    .cert-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(59, 130, 246, 0.45);
+      background: linear-gradient(180deg, rgba(59, 130, 246, 0.08), rgba(255, 255, 255, 0.02));
+    }
+    .cert-card.is-hidden {
+      display: none;
+    }
+    .cert-card-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 14px;
+    }
+    .cert-brand-box {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      padding: 8px;
+    }
+    .cert-brand-box.is-badge {
+      padding: 4px;
+      background: rgba(255, 255, 255, 0.92);
+    }
+    .cert-brand-box img,
+    .cert-brand-box svg {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+    .cert-meta-tag {
+      font-family: 'Geist Mono', monospace;
+      font-size: 0.74rem;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: rgba(59, 130, 246, 0.12);
+      color: #93c5fd;
+      border: 1px solid rgba(59, 130, 246, 0.28);
+      white-space: nowrap;
+    }
+    .cert-issuer {
+      font-family: 'Geist Mono', monospace;
+      font-size: 0.76rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #60a5fa;
+      margin: 14px 0 6px;
+    }
+    .cert-title {
+      font-family: 'Archivo', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      line-height: 1.3;
+      color: #f8fafc;
+      margin: 0 0 8px;
+    }
+    .cert-desc {
+      font-size: 0.9rem;
+      line-height: 1.55;
+      color: #94a3b8;
+      margin: 0;
+    }
+    .cert-foot {
+      padding-top: 14px;
+      border-top: 1px solid rgba(255, 255, 255, 0.07);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      font-size: 0.8rem;
+      color: #cbd5e1;
+    }
+    .cert-date {
+      font-family: 'Geist Mono', monospace;
+      color: #94a3b8;
+    }
+    .cert-link {
+      color: #60a5fa;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .cert-link:hover {
+      text-decoration: underline;
+    }
+
+    .awards-section {
+      padding: 40px 0 72px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .awards-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+    .award-card {
+      background: rgba(255, 255, 255, 0.028);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      border-radius: 14px;
+      padding: 20px 22px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .award-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: rgba(59, 130, 246, 0.14);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      color: #60a5fa;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+    }
+    .award-card h3 {
+      font-family: 'Archivo', sans-serif;
+      font-size: 1.02rem;
+      margin: 0 0 4px;
+      color: #f8fafc;
+    }
+    .award-card p {
+      margin: 0;
+      font-size: 0.88rem;
+      color: #94a3b8;
+      line-height: 1.5;
+    }
+    .nav-links a.is-active {
+      color: #ffffff;
+    }
+
+    @media (max-width: 1024px) {
+      .cert-hero-top {
+        grid-template-columns: 1fr;
+      }
+      .certs-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+    @media (max-width: 680px) {
+      .cert-hero {
+        padding: 98px 0 36px;
+      }
+      .certs-grid,
+      .awards-grid {
+        grid-template-columns: 1fr;
+      }
+      .cert-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="nav" id="top">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Início">JC<span>.</span></a>
+      <nav class="nav-links" id="navLinks" aria-label="Navegação principal">
+        <a href="index.html#stack">Tecnologias</a>
+        <a href="index.html#especialidades">Atuação</a>
+        <a href="index.html#casos">Projetos &amp; Legado</a>
+        <a href="certificacoes.html" class="nav-cert-link is-active">Certificações <span class="nav-cert-badge">14</span></a>
+        <a href="index.html#percurso">Percurso</a>
+        <a href="index.html#contato">Contato</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn btn-ghost btn-sm" href="curriculo.html" target="_blank" rel="noopener">Ver Currículo</a>
+        <a class="btn btn-primary btn-sm" href="Jonas-Carvalho-CV.pdf" download>Baixar PDF ↓</a>
+        <button class="nav-toggle" id="navToggle" type="button" aria-label="Abrir menu" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="cert-hero">
+      <div class="container">
+        <div class="cert-hero-top">
+          <div>
+            <span class="eyebrow">Credenciais Verificadas · Educação Contínua</span>
+            <h1>Certificações, Diplomas &amp; Formação Executiva</h1>
+            <p class="cert-hero-lead">
+              Base acadêmica em Análise e Desenvolvimento de Sistemas combinada a certificações recentes em
+              Inteligência Artificial Agêntica, Cloud Computing, Redes IoT e cursos de extensão em liderança pela PUCRS.
+            </p>
+            <div class="cert-hero-actions">
+              <a class="btn btn-primary" href="https://www.skills.google/public_profiles/2552c712-2626-4c89-9953-f7259b2a91ca" target="_blank" rel="noopener">Perfil Público Google Skills ↗</a>
+              <a class="btn btn-ghost" href="https://www.linkedin.com/in/jonas-santos-b5289836/" target="_blank" rel="noopener">LinkedIn ↗</a>
+              <a class="btn btn-ghost" href="index.html">← Voltar ao Portfólio</a>
+            </div>
+          </div>
+
+          <div class="cert-stats-grid" aria-label="Resumo de credenciais">
+            <div class="cert-stat-card">
+              <strong>14</strong>
+              <span>Diplomas, Badges &amp; Extensões</span>
+            </div>
+            <div class="cert-stat-card">
+              <strong>6</strong>
+              <span>Big Techs &amp; Instituições</span>
+            </div>
+            <div class="cert-stat-card">
+              <strong>61h+</strong>
+              <span>IA Agêntica &amp; Extensões PUCRS</span>
+            </div>
+            <div class="cert-stat-card">
+              <strong>4</strong>
+              <span>Prêmios &amp; Hackathons</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="issuers-bar" aria-label="Instituições emissoras">
+          <span class="issuers-label">Emissores:</span>
+          <span class="issuer-pill">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="2" y="2" width="9" height="9" fill="#f25022"/>
+              <rect x="13" y="2" width="9" height="9" fill="#7fba00"/>
+              <rect x="2" y="13" width="9" height="9" fill="#00a4ef"/>
+              <rect x="13" y="13" width="9" height="9" fill="#ffb900"/>
+            </svg>
+            Microsoft
+          </span>
+          <span class="issuer-pill">
+            <svg viewBox="0 0 32 16" aria-hidden="true">
+              <path fill="#60a5fa" d="M1 2h6v2H1zm8 0h9v2H9zm11 0h11v2H20zM2 5h4v2H2zm8 0h8v2h-8zm11 0h9v2h-9zM2 8h4v2H2zm8 0h8v2h-8zm11 0h9v2h-9zM1 11h6v2H1zm8 0h9v2H9zm11 0h11v2H20z"/>
+            </svg>
+            IBM
+          </span>
+          <span class="issuer-pill">
+            <img src="assets/logos/googlecloud.svg" alt="Google Cloud" />
+            Google Cloud
+          </span>
+          <span class="issuer-pill">
+            <img src="assets/badges/cisco-iot.png" alt="Cisco" />
+            Cisco NetAcad
+          </span>
+          <span class="issuer-pill">PUCRS</span>
+          <span class="issuer-pill">FATEC / ETEC (CPS)</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="cert-section">
+      <div class="container">
+        <div class="cert-toolbar">
+          <div class="cert-filters" role="tablist" aria-label="Filtrar certificações por categoria">
+            <button class="cert-filter-btn is-active" type="button" data-filter="all">Todas (14)</button>
+            <button class="cert-filter-btn" type="button" data-filter="ia">IA &amp; Agentes (2)</button>
+            <button class="cert-filter-btn" type="button" data-filter="cloud">Google Cloud &amp; Dados (5)</button>
+            <button class="cert-filter-btn" type="button" data-filter="gestao">Liderança &amp; Gestão (4)</button>
+            <button class="cert-filter-btn" type="button" data-filter="formacao">Formação &amp; Redes (3)</button>
+          </div>
+          <span class="cert-count-note" id="certCountNote">Exibindo 14 de 14 credenciais</span>
+        </div>
+
+        <div class="certs-grid" id="certsGrid">
+          <!-- IA & Agentes -->
+          <article class="cert-card" data-cat="ia">
+            <div>
+              <div class="cert-card-head">
+                <div class="cert-brand-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <rect x="2" y="2" width="9" height="9" fill="#f25022"/>
+                    <rect x="13" y="2" width="9" height="9" fill="#7fba00"/>
+                    <rect x="2" y="13" width="9" height="9" fill="#00a4ef"/>
+                    <rect x="13" y="13" width="9" height="9" fill="#ffb900"/>
+                  </svg>
+                </div>
+                <span class="cert-meta-tag">IA Agêntica · 6h</span>
+              </div>
+              <p class="cert-issuer">Microsoft · DIO Certification</p>
+              <h2 class="cert-title">Microsoft — Foundry Agentic Engineer</h2>
+              <p class="cert-desc">Engenharia de soluções com agentes de IA no ecossistema Microsoft Foundry, orquestração de fluxos e integração de ferramentas.</p>
+            </div>
+            <div class="cert-foot">
+              <span class="cert-date">Setembro · 2026</span>
+              <span>Certificado Oficial</span>
+            </div>
+          </article>
+
+          <article class="cert-card" data-cat="ia">
+            <div>
+              <div class="cert-card-head">
+                <div class="cert-brand-box" aria-hidden="true">
+                  <svg viewBox="0 0 40 20">
+                    <rect x="2" y="2" width="7" height="2" fill="#60a5fa"/>
+                    <rect x="12" y="2" width="11" height="2" fill="#60a5fa"/>
+                    <rect x="26" y="2" width="12" height="2" fill="#60a5fa"/>
+                    <rect x="4" y="6" width="3" height="2" fill="#93c5fd"/>
+                    <rect x="14" y="6" width="9" height="2" fill="#93c5fd"/>
+                    <rect x="28" y="6" width="9" height="2" fill="#93c5fd"/>
+                    <rect x="4" y="10" width="3" height="2" fill="#60a5fa"/>
+                    <rect x="14" y="10" width="9" height="2" fill="#60a5fa"/>
+                    <rect x="28" y="10" width="9" height="2" fill="#60a5fa"/>
+                    <rect x="2" y="14" width="7" height="2" fill="#93c5fd"/>
+                    <rect x="12" y="14" width="11" height="2" fill="#93c5fd"/>
+                    <rect x="26" y="14" width="12" height="2" fill="#93c5fd"/>
+                  </svg>
+                </div>
+                <span class="cert-meta-tag">IA Corporativa · 15h</span>
+              </div>
+              <p class="cert-issuer">IBM · DIO Certification</p>
+              <h2 class="cert-title">IBM Bob: IA de Nível Empresarial para Devs &amp; Tech Leaders</h2>
+              <p class="cert-desc">Aplicação de Inteligência Artificial corporativa no ciclo de desenvolvimento, automação de engenharia e liderança técnica.</p>
+            </div>
+            <div class="cert-foot">
+              <span class="cert-date">Agosto · 2026</span>
+              <span>Certificado Oficial</span>
+            </div>
+          </article>
+
+          <!-- Google Cloud & Dados -->
+          <article class="cert-card" data-cat="cloud">
+            <div>
+              <div class="cert-card-head">
+                <div class="cert-brand-box">
+                  <img src="assets/logos/googlecloud.svg" alt="Google Cloud" />
+                </div>
+                <span class="cert-meta-tag">Badge GCP</span>
+              </div>
+              <p class="cert-issuer">Google Cloud · Google Skills</p>
+              <h2 class="cert-title">Google Cloud Fundamentals: Core Infrastructure</h2>
+              <p class="cert-desc">Arquitetura central de computação, redes VPC, IAM, armazenamento e serviços gerenciados no Google Cloud Platform.</p>
+            </div>
+            <div class="cert-foot">
+              <span class="cert-date">Agosto · 2022</span>
+              <a class="cert-link" href="https://www.skills.google/public_profiles/2552c712-2626-4c89-9953-f7259b2a91ca" target="_blank" rel="noopener">Verificar Perfil ↗</a>
+            </div>
+          </article>
+
+          <article class="cert-card" data-cat="cloud">
+            <div>
+              <div class="cert-card-head">
+                <div class="cert-brand-box">
+                  <img src="assets/logos/googlecloud.svg" alt="Google Cloud" />
+                </div>
+                <span class="cert-meta-tag">Badge GCP</span>
+              </div>
+              <p class="cert-issuer">Google Cloud · Google Skills</p>
+              <h2 class="cert-title">Infrastructure and Application Modernization with Google Cloud</h2>
+              <p class="cert-desc">Modernização de sistemas legados, conteinerização, orquestração em Kubernetes Engine e estratégias de migração cloud.</p>
+            </div>
+            <div class="cert-foot">
+              <span class="cert-date">Julho · 2022</span>
+              <a class="cert-link" href="https://www.skills.google/public_profiles/2552c712-2626-4c89-9953-f7259b2a91ca" target="_blank" rel="noopener">Verificar Perfil ↗</a>
+            </div>
+          </article>
+
+          <article class="cert-card" data-cat="cloud">
+            <div>
+              <div class="cert-card-head">
+                <div class="cert-brand-box">
+                  <img src="assets/logos/googlecloud.svg" alt="Google Cloud" />
+                </div>
+                <span class="cert-meta-tag">Badge Dados</span>
+              </div>
+              <p class="cert-issuer">Google Cloud · Google Skills</p>
+              <h2 class="cert-title">Innovating with Data and Google Cloud</h2>
+              <p class="cert-desc">Uso estratégico de dados em nuvem, engenharia analítica, pipelines modernos e geração de valor orientado a dados.</p>
+            </div>
+            <div class="cert-foot">
+              <span class="cert-date">Julho · 2022</span>
+              <a class="cert-link" href="https://www.skills.google/public_profiles/2552c712-2626-4c89-9953-f7259b2a91ca" target="_blank" rel="noopener">Verificar Perfil ↗</a>
+            </div>
+          </article>
+
+          <article class="cert-card" data-cat="cloud">
+            <div>
+              <div class="cert-card-head">
+                <div class="cert-brand-box">
+                  <img src="assets/logos/googlecloud.svg" alt="Google Cloud" />
+                </div>
+                <span class="cert-meta-tag">Badge BigQuery</span>
+              </div>
+              <p class="cert-issuer">Google Cloud · Google Skills</p>
+              <h2 class="cert-title">Cloud Hero BigQuery Skills</h2>
+              <p class="cert-desc">Consultas SQL analíticas em larga escala, processamento distribuído e modelagem de dados no Google BigQuery.</p>
+            </div>
+            <div class="cert-foot">
+              <span class="cert-date">Julho · 2022</span>
+              <a class="cert-link" href="https://www.skills.google/public_profiles/2552c712-2626-4c89-9953-f7259b2a91ca" target="_blank" rel="noopener">Verificar Perfil ↗</a>
+            </div>
+          </article>
+
+          <article class="cert-card" data-cat="cloud">
+            <div>
+              <div class="cert-card-head">
+                <div class="cert-brand-box">
+                  <img src="assets/logos/googlecloud.svg" alt="Google Cloud" />
+                </div>
+                <span class="cert-meta-tag">Badge Cloud</span>
+              </div>
+              <p class="cert-issuer">Google Cloud · Google Skills</p>
+              <h2 class="cert-title">Introduction to Digital Transformation with Google Cloud</h2>
+              <p class="cert-desc">Fundamentos de transformação digital, adoção de nuvem corporativa e modernização de capacidades tecnológicas.</p>
+            </div>
+            <div class="cert-foot">
+              <span class="cert-date">Julho · 2022</span>
+              <a class="cert-link" href="https://www.skills.google/public_profiles/2552c712-2626-4c89-9953-f7259b2a91ca" target="_blank" rel="noopener">Verificar Perfil ↗</a>
+            </div>
+          </article>
+
+          <!-- Liderança & Gestão (PUCRS) -->
+          <article class="cert-card" data-cat="gestao">
+            <div>
+              <div class="cert-card-head">
+                <div class="cert-brand-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#93c5fd" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 3l8 3v6c0 5-3.5 8.2-8 9-4.5-.8-8-4-8-9V6l8-3z"/>
+                    <path d="M9 12l2 2 4-4"/>
+                  </svg>
+                </div>
+                <span class="cert-meta-tag">Extensão · 10h</span>
+              </div>
+              <p class="cert-issuer">PUCRS · Escola de Direito</p>
+              <h2 class="cert-title">Técnicas de Negociação</h2>
+              <p class="cert-desc">Perfis de negociação, separação entre conflito e problema, leitura de contexto e criatividade aplicada à mesa de negociação.</p>
+            </div>
+            <div class="cert-foot">
+              <span class="cert-date">Setembro · 2025</span>
+              <span>Extensão Universitária</span>
+            </div>
+          </article>
+
+          <article class="cert-card" data-cat="gestao">
+            <div>
+              <div class="cert-card-head">
+                <div class="cert-brand-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#93c5fd" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 3l8 3v6c0 5-3.5 8.2-8 9-4.5-.8-8-4-8-9V6l8-3z"/>
+                    <path d="M12 8v5M12 16h.01"/>
+                  </svg>
+                </div>
+                <span class="cert-meta-tag">Extensão · 10h</span>
+              </div>
+              <p class="cert-issuer">PUCRS · Escola de Negócios</p>
+              <h2 class="cert-title">Gestão de Crise</h2>
+              <p class="cert-desc">Resiliência organizacional, continuidade de negócios, planos de mitigação e contingência, comunicação de crise e IA aplicada.</p>
+            </div>
+            <div class="cert-foot">
+              <span class="cert-date">Agosto · 2025</span>
+              <span>Extensão Universitária</span>
+            </div>
+          </article>
+
+          <article class="cert-card" data-cat="gestao">
+            <div>
+              <div class="cert-card-head">
+                <div class="cert-brand-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#93c5fd" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                    <circle cx="9" cy="7" r="4"/>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                  </svg>
+                </div>
+                <span class="cert-meta-tag">Extensão · 10h</span>
+              </div>
+              <p class="cert-issuer">PUCRS · Escola de Negócios</p>
+              <h2 class="cert-title">Mentoria e Coaching de Equipes: Desenvolvimento Tailor-Made</h2>
+              <p class="cert-desc">Gestão por processos, Mapeamento do Fluxo de Valor (VSM), princípios Lean e melhoria contínua voltada a times técnicos.</p>
+            </div>
+            <div class="cert-foot">
+              <span class="cert-date">Agosto · 2025</span>
+              <span>Extensão Universitária</span>
+            </div>
+          </article>
+
+          <article class="cert-card" data-cat="gestao">
+            <div>
+              <div class="cert-card-head">
+                <div class="cert-brand-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#93c5fd" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="3"/>
+                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9c.26.6.79 1 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                  </svg>
+                </div>
+                <span class="cert-meta-tag">Extensão · 10h</span>
+              </div>
+              <p class="cert-issuer">PUCRS · Escola Politécnica</p>
+              <h2 class="cert-title">Indústria 4.0</h2>
+              <p class="cert-desc">Gêmeos digitais, Big Data &amp; Analytics, Smart Manufacturing, Smart Working e liderança na transformação industrial.</p>
+            </div>
+            <div class="cert-foot">
+              <span class="cert-date">Março · 2024</span>
+              <span>Extensão Universitária</span>
+            </div>
+          </article>
+
+          <!-- Formação & Redes -->
+          <article class="cert-card" data-cat="formacao">
+            <div>
+              <div class="cert-card-head">
+                <div class="cert-brand-box is-badge">
+                  <img src="assets/badges/cisco-iot.png" alt="Badge Cisco Introduction to IoT" />
+                </div>
+                <span class="cert-meta-tag">Badge Cisco</span>
+              </div>
+              <p class="cert-issuer">Cisco Networking Academy</p>
+              <h2 class="cert-title">Introduction to Internet of Things (IoT)</h2>
+              <p class="cert-desc">Transformação digital, redes IoT, automação &amp; IA, Intent-Based Networking e fundamentos de cibersegurança conectada.</p>
+            </div>
+            <div class="cert-foot">
+              <span class="cert-date">Julho · 2022</span>
+              <span>Verified Badge</span>
+            </div>
+          </article>
+
+          <article class="cert-card" data-cat="formacao">
+            <div>
+              <div class="cert-card-head">
+                <div class="cert-brand-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#93c5fd" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                    <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                  </svg>
+                </div>
+                <span class="cert-meta-tag">Ensino Superior</span>
+              </div>
+              <p class="cert-issuer">FATEC Ipiranga · Centro Paula Souza</p>
+              <h2 class="cert-title">Tecnólogo em Análise e Desenvolvimento de Sistemas</h2>
+              <p class="cert-desc">Formação superior em engenharia de software, estruturas de dados, banco de dados, arquitetura de sistemas e projetos aplicados.</p>
+            </div>
+            <div class="cert-foot">
+              <span class="cert-date">2018 – 2020</span>
+              <span>Diploma Superior</span>
+            </div>
+          </article>
+
+          <article class="cert-card" data-cat="formacao">
+            <div>
+              <div class="cert-card-head">
+                <div class="cert-brand-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#93c5fd" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="3" width="20" height="14" rx="2"/>
+                    <path d="M8 21h8M12 17v4"/>
+                  </svg>
+                </div>
+                <span class="cert-meta-tag">Ensino Técnico</span>
+              </div>
+              <p class="cert-issuer">ETEC Jaraguá · Centro Paula Souza</p>
+              <h2 class="cert-title">Técnico em Programação e Manutenção de Computadores</h2>
+              <p class="cert-desc">Base técnica em lógica de programação, infraestrutura, hardware, redes locais e desenvolvimento de software.</p>
+            </div>
+            <div class="cert-foot">
+              <span class="cert-date">2016 – 2017</span>
+              <span>Diploma Técnico</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="awards-section" id="premios">
+      <div class="container">
+        <span class="eyebrow">Reconhecimentos</span>
+        <h2 class="section-title" style="margin-top:8px;">Prêmios, Hackathons &amp; Mérito Acadêmico</h2>
+
+        <div class="awards-grid">
+          <article class="award-card">
+            <div class="award-icon" aria-hidden="true">🏆</div>
+            <div>
+              <h3>Campeão Regional · Hackathon InterFatec 2022</h3>
+              <p>1º lugar na competição regional entre unidades FATEC, desenvolvendo solução tecnológica completa sob pressão de tempo.</p>
+            </div>
+          </article>
+
+          <article class="award-card">
+            <div class="award-icon" aria-hidden="true">🥇</div>
+            <div>
+              <h3>Campeão · Hackathon Interno FATEC Ipiranga</h3>
+              <p>Equipe vencedora do desafio interno de inovação e engenharia aplicada da FATEC Ipiranga.</p>
+            </div>
+          </article>
+
+          <article class="award-card">
+            <div class="award-icon" aria-hidden="true">☁️</div>
+            <div>
+              <h3>Vice-Campeão · Challenge BigQuery (Google &amp; Claro Brasil)</h3>
+              <p>2º lugar no desafio técnico de engenharia de dados e consultas analíticas em larga escala com Google BigQuery.</p>
+            </div>
+          </article>
+
+          <article class="award-card">
+            <div class="award-icon" aria-hidden="true">🎓</div>
+            <div>
+              <h3>Aluno Destaque 2022 &amp; TCC Prata da Casa</h3>
+              <p>Reconhecimento oficial de mérito acadêmico e destaque de Trabalho de Conclusão de Curso na FATEC Ipiranga.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© 2026 Jonas Carvalho · Líder Técnico &amp; Arquiteto de Soluções</span>
+      <span class="mono">
+        <a href="index.html">Portfólio</a> ·
+        <a href="curriculo.html">Currículo</a> ·
+        <a href="https://www.linkedin.com/in/jonas-santos-b5289836/" target="_blank" rel="noopener">LinkedIn</a> ·
+        <a href="mailto:jocarvalhosantos@gmail.com">jocarvalhosantos@gmail.com</a>
+      </span>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const navToggle = document.getElementById('navToggle');
+      const navLinks = document.getElementById('navLinks');
+      if (navToggle && navLinks) {
+        navToggle.addEventListener('click', () => {
+          const open = navLinks.classList.toggle('open');
+          navToggle.setAttribute('aria-expanded', String(open));
+        });
+      }
+
+      const buttons = document.querySelectorAll('.cert-filter-btn');
+      const cards = document.querySelectorAll('.cert-card');
+      const countNote = document.getElementById('certCountNote');
+      const total = cards.length;
+
+      buttons.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const filter = btn.getAttribute('data-filter');
+          buttons.forEach((b) => b.classList.remove('is-active'));
+          btn.classList.add('is-active');
+
+          let visible = 0;
+          cards.forEach((card) => {
+            const match = filter === 'all' || card.getAttribute('data-cat') === filter;
+            card.classList.toggle('is-hidden', !match);
+            if (match) visible += 1;
+          });
+
+          if (countNote) {
+            countNote.textContent = `Exibindo ${visible} de ${total} credenciais`;
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

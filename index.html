@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jonas Carvalho — Líder Técnico</title>
+  <meta name="description" content="Portfólio de Jonas Carvalho — Líder Técnico em São Paulo. Arquitetura Cloud, RPA, DevOps (Jenkins/GitLab), Modernização de Legado, Assessments e IA." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2307080a'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial,sans-serif' font-weight='900' font-size='28' fill='%23ffffff'%3EJC%3Ctspan fill='%233b82f6'%3E.%3C/tspan%3E%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,600..900&family=Geist+Mono:wght@400;500;600&family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav" id="top">
+    <div class="nav-inner">
+      <a href="#top" class="nav-logo" aria-label="Início">JC<span>.</span></a>
+
+      <nav class="nav-links" id="navLinks" aria-label="Navegação principal">
+        <a href="#stack">Tecnologias</a>
+        <a href="#especialidades">Atuação</a>
+        <a href="#casos">Projetos &amp; Legado</a>
+        <a href="certificacoes.html" class="nav-cert-link">Certificações <span class="nav-cert-badge">14</span></a>
+        <a href="#percurso">Percurso</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="curriculo.html" class="btn btn-ghost btn-sm">Ver Currículo</a>
+        <a href="Jonas-Carvalho-CV.pdf" download class="btn btn-primary btn-sm">Baixar PDF ↓</a>
+        <button type="button" class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-top-bar">
+        <span class="status-badge"><i class="status-dot"></i>Líder Técnico · Global Hitss Brasil</span>
+        <span class="mono">São Paulo, Brasil · Telecom · Indústria · Energia · Serviços</span>
+      </div>
+
+      <div class="hero-grid">
+        <div>
+          <span class="eyebrow">// Jonas Carvalho · Arquitetura &amp; Liderança Técnica</span>
+          <h1 class="hero-title">
+            Do sistema <span class="accent">legado</span> à arquitetura em <span class="accent">RPA, Cloud &amp; IA</span>.
+          </h1>
+          <p class="hero-lede">
+            Mais de 8 anos liderando squads multidisciplinares, Torre de RPA, esteiras Jenkins/GitLab, Assessments corporativos e modernização de sistemas críticos.
+          </p>
+
+          <div class="hero-ctas">
+            <a href="#casos" class="btn btn-primary">Ver Projetos &amp; Arquiteturas ↓</a>
+            <a href="certificacoes.html" class="btn btn-cert-hero">Certificações &amp; Diplomas (14) ↗</a>
+            <a href="curriculo.html" class="btn btn-ghost">Currículo Online ↗</a>
+          </div>
+
+          <div class="hero-highlights">
+            <div class="mini-kpi">
+              <strong>8+ anos</strong>
+              <span>Engenharia, legado e arquitetura</span>
+            </div>
+            <div class="mini-kpi">
+              <strong>Multi-Cloud</strong>
+              <span>AWS · OCI · GCP · OpenShift</span>
+            </div>
+            <div class="mini-kpi">
+              <strong>End-to-End</strong>
+              <span>Assessments, RPA e DevSecOps</span>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-profile-card">
+          <div class="hero-photo-wrap">
+            <img src="assets/jonas-photo.jpg" alt="Foto profissional de Jonas Carvalho" />
+            <div class="photo-badge">
+              <div>
+                <strong>Jonas Carvalho</strong>
+                <span>Líder Técnico · Cloud, RPA &amp; DevOps</span>
+              </div>
+              <span class="badge-tag">SP · BRASIL</span>
+            </div>
+          </div>
+          <div class="profile-quick-links">
+            <a href="https://www.linkedin.com/in/jonas-santos-b5289836/" target="_blank" rel="noopener" class="quick-chip">
+              <span>LinkedIn</span><span>↗</span>
+            </a>
+            <a href="Jonas-Carvalho-CV.pdf" download class="quick-chip">
+              <span>Currículo PDF</span><span>↓</span>
+            </a>
+            <a href="certificacoes.html" class="quick-chip quick-chip-featured">
+              <span>Certificações, Diplomas &amp; Prêmios (14)</span><span>↗</span>
+            </a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOGO MARQUEE STRIP -->
+  <div class="logo-marquee" aria-label="Principais tecnologias">
+    <div class="logo-marquee-track">
+      <span class="mq-brand"><img src="assets/logos/python.svg" alt="Python" />Python</span>
+      <span class="mq-brand"><img src="assets/logos/uipath.svg" alt="UiPath" />UiPath</span>
+      <span class="mq-brand"><img src="assets/logos/csharp.svg" alt="C#" />Macro Manager C#</span>
+      <span class="mq-brand"><img src="assets/logos/jenkins.svg" alt="Jenkins" />Jenkins Workers</span>
+      <span class="mq-brand"><img src="assets/logos/gitlab.svg" alt="GitLab" />GitLab CI</span>
+      <span class="mq-brand"><img src="assets/logos/docker.svg" alt="Docker" />Docker</span>
+      <span class="mq-brand"><img class="logo-invert" src="assets/logos/aws.svg" alt="AWS" />AWS</span>
+      <span class="mq-brand"><img src="assets/logos/oracle.svg" alt="Oracle Cloud" />OCI</span>
+      <span class="mq-brand"><img src="assets/logos/googlecloud.svg" alt="Google Cloud" />GCP</span>
+      <span class="mq-brand"><img src="assets/logos/kubernetes.svg" alt="Kubernetes" />Kubernetes</span>
+      <span class="mq-brand"><img src="assets/logos/react.svg" alt="React" />React</span>
+      <span class="mq-brand"><img src="assets/logos/nestjs.svg" alt="NestJS" />NestJS</span>
+      <span class="mq-brand"><img src="assets/logos/php.svg" alt="PHP" />PHP</span>
+      <span class="mq-brand"><img src="assets/logos/laravel.svg" alt="Laravel" />Laravel</span>
+      <span class="mq-brand"><img src="assets/logos/java.svg" alt="Java" />Java</span>
+      <span class="mq-brand"><img src="assets/logos/grafana.svg" alt="Grafana" />Grafana</span>
+      <span class="mq-brand"><img src="assets/logos/keycloak.svg" alt="Keycloak" />Keycloak</span>
+      <span class="mq-brand"><img src="assets/logos/rabbitmq.svg" alt="RabbitMQ" />RabbitMQ</span>
+
+      <span class="mq-brand"><img src="assets/logos/python.svg" alt="" />Python</span>
+      <span class="mq-brand"><img src="assets/logos/uipath.svg" alt="" />UiPath</span>
+      <span class="mq-brand"><img src="assets/logos/csharp.svg" alt="" />Macro Manager C#</span>
+      <span class="mq-brand"><img src="assets/logos/jenkins.svg" alt="" />Jenkins Workers</span>
+      <span class="mq-brand"><img src="assets/logos/gitlab.svg" alt="" />GitLab CI</span>
+      <span class="mq-brand"><img src="assets/logos/docker.svg" alt="" />Docker</span>
+      <span class="mq-brand"><img class="logo-invert" src="assets/logos/aws.svg" alt="" />AWS</span>
+      <span class="mq-brand"><img src="assets/logos/oracle.svg" alt="" />OCI</span>
+      <span class="mq-brand"><img src="assets/logos/googlecloud.svg" alt="" />GCP</span>
+      <span class="mq-brand"><img src="assets/logos/kubernetes.svg" alt="" />Kubernetes</span>
+      <span class="mq-brand"><img src="assets/logos/react.svg" alt="" />React</span>
+      <span class="mq-brand"><img src="assets/logos/nestjs.svg" alt="" />NestJS</span>
+      <span class="mq-brand"><img src="assets/logos/php.svg" alt="" />PHP</span>
+      <span class="mq-brand"><img src="assets/logos/laravel.svg" alt="" />Laravel</span>
+      <span class="mq-brand"><img src="assets/logos/java.svg" alt="" />Java</span>
+      <span class="mq-brand"><img src="assets/logos/grafana.svg" alt="" />Grafana</span>
+      <span class="mq-brand"><img src="assets/logos/keycloak.svg" alt="" />Keycloak</span>
+      <span class="mq-brand"><img src="assets/logos/rabbitmq.svg" alt="" />RabbitMQ</span>
+    </div>
+  </div>
+
+  <!-- 01. MURAL VISUAL DE TECNOLOGIAS -->
+  <section class="section" id="stack">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <span class="section-kicker">(01) Stack Tecnológico</span>
+          <h2 class="section-title">Tecnologias que opero em produção</h2>
+        </div>
+        <p class="section-sub">
+          Selecione o domínio para visualizar as ferramentas utilizadas no dia a dia.
+        </p>
+      </div>
+
+      <div class="tab-bar" role="tablist" aria-label="Filtrar tecnologias">
+        <button type="button" class="tab-btn active" role="tab" aria-selected="true" data-tab="all">Principais (24)</button>
+        <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab="rpa">RPA &amp; Workers</button>
+        <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab="devops">Cloud &amp; DevOps</button>
+        <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab="backend">Backend, Web &amp; Legado</button>
+        <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab="dados">Dados, IA &amp; Segurança</button>
+      </div>
+
+      <div class="logo-grid" id="logoGrid">
+        <div class="logo-tile" data-cats="rpa dados"><div class="logo-icon-wrap"><img src="assets/logos/python.svg" alt="Python" /></div><strong>Python</strong><span>Robôs RPA &amp; APIs</span></div>
+        <div class="logo-tile" data-cats="rpa"><div class="logo-icon-wrap"><img src="assets/logos/fastapi.svg" alt="FastAPI" /></div><strong>FastAPI</strong><span>Serviços &amp; Workers</span></div>
+        <div class="logo-tile" data-cats="rpa"><div class="logo-icon-wrap"><img src="assets/logos/uipath.svg" alt="UiPath" /></div><strong>UiPath</strong><span>Torre &amp; Automação</span></div>
+        <div class="logo-tile" data-cats="rpa"><div class="logo-icon-wrap"><img src="assets/logos/csharp.svg" alt="Macro Manager C#" /></div><strong>Macro Manager</strong><span>Automação C# &amp; Desktop</span></div>
+        <div class="logo-tile" data-cats="rpa devops"><div class="logo-icon-wrap"><img src="assets/logos/jenkins.svg" alt="Jenkins" /></div><strong>Jenkins</strong><span>Esteiras &amp; Workers RPA</span></div>
+        <div class="logo-tile" data-cats="devops"><div class="logo-icon-wrap"><img src="assets/logos/gitlab.svg" alt="GitLab" /></div><strong>GitLab CI</strong><span>Repos &amp; Entrega Contínua</span></div>
+        <div class="logo-tile" data-cats="devops rpa"><div class="logo-icon-wrap"><img src="assets/logos/docker.svg" alt="Docker" /></div><strong>Docker</strong><span>Containers &amp; Orquestração</span></div>
+        <div class="logo-tile" data-cats="devops"><div class="logo-icon-wrap"><img class="logo-invert" src="assets/logos/aws.svg" alt="AWS" /></div><strong>AWS</strong><span>EKS, ECS, Lambda, SQS</span></div>
+        <div class="logo-tile" data-cats="devops"><div class="logo-icon-wrap"><img src="assets/logos/oracle.svg" alt="Oracle Cloud" /></div><strong>Oracle Cloud</strong><span>Infra OCI &amp; Dados</span></div>
+        <div class="logo-tile" data-cats="devops"><div class="logo-icon-wrap"><img src="assets/logos/googlecloud.svg" alt="GCP" /></div><strong>Google Cloud</strong><span>Core Infra &amp; GKE</span></div>
+        <div class="logo-tile" data-cats="devops"><div class="logo-icon-wrap"><img src="assets/logos/kubernetes.svg" alt="Kubernetes" /></div><strong>Kubernetes</strong><span>EKS, GKE &amp; OpenShift</span></div>
+        <div class="logo-tile" data-cats="devops"><div class="logo-icon-wrap"><img src="assets/logos/redhat.svg" alt="Red Hat OpenShift" /></div><strong>Red Hat</strong><span>OpenShift &amp; Linux</span></div>
+        <div class="logo-tile" data-cats="devops"><div class="logo-icon-wrap"><img src="assets/logos/grafana.svg" alt="Grafana" /></div><strong>Grafana</strong><span>Dashboards &amp; Alertas</span></div>
+        <div class="logo-tile" data-cats="devops"><div class="logo-icon-wrap"><img src="assets/logos/prometheus.svg" alt="Prometheus" /></div><strong>Prometheus</strong><span>Métricas &amp; Telemetria</span></div>
+        <div class="logo-tile" data-cats="devops"><div class="logo-icon-wrap"><img src="assets/logos/nginx.svg" alt="Nginx" /></div><strong>Nginx</strong><span>Proxy Reverso &amp; TLS</span></div>
+        <div class="logo-tile" data-cats="backend"><div class="logo-icon-wrap"><img src="assets/logos/nodejs.svg" alt="Node.js" /></div><strong>Node.js</strong><span>APIs &amp; Microsserviços</span></div>
+        <div class="logo-tile" data-cats="backend"><div class="logo-icon-wrap"><img src="assets/logos/nestjs.svg" alt="NestJS" /></div><strong>NestJS</strong><span>BFF &amp; Serviços Escaláveis</span></div>
+        <div class="logo-tile" data-cats="backend"><div class="logo-icon-wrap"><img src="assets/logos/react.svg" alt="React" /></div><strong>React + TS</strong><span>Frontends &amp; Portais</span></div>
+        <div class="logo-tile" data-cats="backend dados"><div class="logo-icon-wrap"><img src="assets/logos/php.svg" alt="PHP" /></div><strong>PHP</strong><span>Sistemas Web &amp; Legado</span></div>
+        <div class="logo-tile" data-cats="backend dados"><div class="logo-icon-wrap"><img src="assets/logos/laravel.svg" alt="Laravel" /></div><strong>Laravel</strong><span>Portais &amp; Plataformas</span></div>
+        <div class="logo-tile" data-cats="backend"><div class="logo-icon-wrap"><img src="assets/logos/java.svg" alt="Java" /></div><strong>Java</strong><span>Evolução de Sistemas Legados</span></div>
+        <div class="logo-tile" data-cats="backend"><div class="logo-icon-wrap"><img src="assets/logos/flutter.svg" alt="Flutter" /></div><strong>Flutter</strong><span>Apps Multiplataforma</span></div>
+        <div class="logo-tile" data-cats="dados rpa"><div class="logo-icon-wrap"><img src="assets/logos/rabbitmq.svg" alt="RabbitMQ" /></div><strong>RabbitMQ</strong><span>Filas &amp; Workers Assíncronos</span></div>
+        <div class="logo-tile" data-cats="dados"><div class="logo-icon-wrap"><img src="assets/logos/keycloak.svg" alt="Keycloak" /></div><strong>Keycloak</strong><span>OAuth 2.0 &amp; OIDC</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02. PILARES VISUAIS -->
+  <section class="section" id="especialidades">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <span class="section-kicker">(02) Pilares de Atuação</span>
+          <h2 class="section-title">Onde entrego mais resultado</h2>
+        </div>
+        <p class="section-sub">
+          Direção técnica para times multidisciplinares, automação em escala, esteiras CI/CD e modernização segura.
+        </p>
+      </div>
+
+      <div class="pillars-grid">
+        <article class="pillar-card">
+          <div class="pillar-media">
+            <img src="assets/case-rpa.jpg" alt="Ilustração abstrata de automação RPA distribuída" />
+            <span class="pillar-tag">01 · ENGENHARIA RPA</span>
+          </div>
+          <div class="pillar-body">
+            <h3>Torre de RPA &amp; Microsserviços</h3>
+            <p>Robôs em Python, UiPath, Automation 360 e Macro Manager (C#), incluindo microsserviços empacotados como monólito unificado em Docker.</p>
+            <div class="pillar-logos">
+              <img src="assets/logos/python.svg" alt="Python" title="Python" />
+              <img src="assets/logos/uipath.svg" alt="UiPath" title="UiPath" />
+              <img src="assets/logos/csharp.svg" alt="C#" title="C#" />
+              <img src="assets/logos/rabbitmq.svg" alt="RabbitMQ" title="RabbitMQ" />
+              <img src="assets/logos/docker.svg" alt="Docker" title="Docker" />
+            </div>
+          </div>
+        </article>
+
+        <article class="pillar-card">
+          <div class="pillar-media">
+            <img src="assets/case-cloud.jpg" alt="Ilustração abstrata de Cloud, DevOps e Observabilidade" />
+            <span class="pillar-tag">02 · DEVOPS &amp; CLOUD</span>
+          </div>
+          <div class="pillar-body">
+            <h3>Esteiras Jenkins (Workers), GitLab &amp; Observabilidade</h3>
+            <p>Pipelines CI/CD e DevSecOps com agentes distribuídos no Jenkins, Keycloak OIDC, AWS, OCI e monitoramento em Grafana, Prometheus e Loki.</p>
+            <div class="pillar-logos">
+              <img src="assets/logos/jenkins.svg" alt="Jenkins" title="Jenkins" />
+              <img src="assets/logos/gitlab.svg" alt="GitLab" title="GitLab CI" />
+              <img class="logo-invert" src="assets/logos/aws.svg" alt="AWS" title="AWS" />
+              <img src="assets/logos/oracle.svg" alt="OCI" title="Oracle Cloud" />
+              <img src="assets/logos/grafana.svg" alt="Grafana" title="Grafana" />
+            </div>
+          </div>
+        </article>
+
+        <article class="pillar-card">
+          <div class="pillar-media">
+            <img src="assets/case-legacy.jpg" alt="Ilustração arquitetural de modernização de legado" />
+            <span class="pillar-tag">03 · LEGADO &amp; ASSESSMENTS</span>
+          </div>
+          <div class="pillar-body">
+            <h3>Modernização de Legados &amp; Assessments</h3>
+            <p>Desacoplamento seguro de sistemas legados (Java, PHP e arquiteturas distribuídas) e Assessments técnicos para evolução e cisão de sistemas.</p>
+            <div class="pillar-logos">
+              <img src="assets/logos/java.svg" alt="Java" title="Java" />
+              <img src="assets/logos/php.svg" alt="PHP" title="PHP" />
+              <img src="assets/logos/nestjs.svg" alt="NestJS" title="NestJS" />
+              <img src="assets/logos/react.svg" alt="React" title="React" />
+              <img src="assets/logos/azure.svg" alt="Azure" title="Azure" />
+            </div>
+          </div>
+        </article>
+
+        <article class="pillar-card">
+          <div class="pillar-media">
+            <img src="assets/case-ai.jpg" alt="Ilustração de IA Corporativa e Roteamento de Dados" />
+            <span class="pillar-tag">04 · IA CORPORATIVA &amp; PRODUTO</span>
+          </div>
+          <div class="pillar-body">
+            <h3>Plataformas de IA, RAG &amp; AIOps</h3>
+            <p>Liderança técnica de portais de IA com roteamento multi-LLM, RAG em bases corporativas, leitura inteligente de documentos e telemetria.</p>
+            <div class="pillar-logos">
+              <img src="assets/logos/laravel.svg" alt="Laravel" title="Laravel" />
+              <img src="assets/logos/postgresql.svg" alt="PostgreSQL" title="PostgreSQL" />
+              <img src="assets/logos/flutter.svg" alt="Flutter" title="Flutter" />
+              <img src="assets/logos/keycloak.svg" alt="Keycloak" title="Keycloak" />
+              <img src="assets/logos/linux.svg" alt="Linux" title="Linux" />
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03. PORTFÓLIO DE PROJETOS -->
+  <section class="section" id="casos">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <span class="section-kicker">(03) Projetos Reais &amp; Legado</span>
+          <h2 class="section-title">Arquiteturas e entregas</h2>
+        </div>
+        <p class="section-sub">
+          Visão geral das principais frentes conduzidas, preservando sigilo operacional e de clientes. Clique em <strong>Ver Arquitetura</strong> para ver o desenho conceitual.
+        </p>
+      </div>
+
+      <div class="filter-bar" role="group" aria-label="Filtrar projetos">
+        <button type="button" class="filter-btn active" data-filter="all">Todos (9)</button>
+        <button type="button" class="filter-btn" data-filter="legado">Legado</button>
+        <button type="button" class="filter-btn" data-filter="rpa">RPA &amp; Workers</button>
+        <button type="button" class="filter-btn" data-filter="devops">Cloud &amp; DevOps</button>
+        <button type="button" class="filter-btn" data-filter="ia">IA &amp; Produtos</button>
+        <button type="button" class="filter-btn" data-filter="assessment">Assessments</button>
+      </div>
+
+      <div class="cases-grid" id="casesGrid">
+        <!-- 1. IDENTIDADE DIGITAL SSO -->
+        <article class="case-card" data-cats="legado devops">
+          <div class="case-banner">
+            <img src="assets/case-legacy.jpg" alt="Identidade Digital SSO" />
+            <div class="case-banner-overlay">
+              <span class="case-domain">Legado · AWS</span>
+              <span class="case-client-top">Telecom</span>
+            </div>
+          </div>
+          <div class="case-content">
+            <h3 class="case-title">Identidade Digital &amp; SSO Corporativo</h3>
+            <p class="case-desc">Liderança técnica em plataforma de autenticação multi-serviços com React, NestJS, AWS e evolução contínua de segurança.</p>
+          </div>
+          <div class="case-footer">
+            <div class="case-stack-logos">
+              <img src="assets/logos/react.svg" alt="React" title="React" />
+              <img src="assets/logos/nestjs.svg" alt="NestJS" title="NestJS" />
+              <img src="assets/logos/dynamodb.svg" alt="NoSQL" title="AWS NoSQL" />
+              <img src="assets/logos/redis.svg" alt="Redis" title="Redis" />
+            </div>
+            <button type="button" class="btn-inspect" data-case="identidade-sso">Ver Arquitetura ↗</button>
+          </div>
+        </article>
+
+        <!-- 2. RPA OCI -->
+        <article class="case-card" data-cats="rpa devops">
+          <div class="case-banner">
+            <img src="assets/case-cloud.jpg" alt="Orquestração RPA OCI" />
+            <div class="case-banner-overlay">
+              <span class="case-domain">RPA &amp; Infra OCI</span>
+              <span class="case-client-top">Indústria</span>
+            </div>
+          </div>
+          <div class="case-content">
+            <h3 class="case-title">Orquestração RPA em Cloud &amp; Observabilidade</h3>
+            <p class="case-desc">Integração ITSM via OAuth 2.0/OIDC com FastAPI, execução via workers Jenkins em Docker na OCI e stack Grafana/Loki.</p>
+          </div>
+          <div class="case-footer">
+            <div class="case-stack-logos">
+              <img src="assets/logos/fastapi.svg" alt="FastAPI" title="FastAPI" />
+              <img src="assets/logos/jenkins.svg" alt="Jenkins" title="Jenkins" />
+              <img src="assets/logos/keycloak.svg" alt="Keycloak" title="Keycloak" />
+              <img src="assets/logos/grafana.svg" alt="Grafana" title="Grafana" />
+            </div>
+            <button type="button" class="btn-inspect" data-case="rpa-oci">Ver Arquitetura ↗</button>
+          </div>
+        </article>
+
+        <!-- 3. LEGADO JAVA & PHP -->
+        <article class="case-card" data-cats="legado rpa devops">
+          <div class="case-banner">
+            <img src="assets/case-rpa.jpg" alt="Modernização de Legado" />
+            <div class="case-banner-overlay">
+              <span class="case-domain">Legado Java &amp; PHP</span>
+              <span class="case-client-top">Telecom</span>
+            </div>
+          </div>
+          <div class="case-content">
+            <h3 class="case-title">Desacoplamento de Parque RPA &amp; Legado PHP</h3>
+            <p class="case-desc">Separação de aplicações acopladas em Java para containers isolados por fila, sustentação PHP e automação GitLab CI.</p>
+          </div>
+          <div class="case-footer">
+            <div class="case-stack-logos">
+              <img src="assets/logos/java.svg" alt="Java" title="Java" />
+              <img src="assets/logos/php.svg" alt="PHP" title="PHP" />
+              <img src="assets/logos/docker.svg" alt="Docker" title="Docker" />
+              <img src="assets/logos/gitlab.svg" alt="GitLab" title="GitLab" />
+            </div>
+            <button type="button" class="btn-inspect" data-case="legado-containers">Ver Arquitetura ↗</button>
+          </div>
+        </article>
+
+        <!-- 4. ASSESSMENT M&A -->
+        <article class="case-card" data-cats="assessment devops">
+          <div class="case-banner">
+            <img src="assets/case-legacy.jpg" alt="Assessment Técnico" />
+            <div class="case-banner-overlay">
+              <span class="case-domain">Assessment M&amp;A</span>
+              <span class="case-client-top">Infraestrutura</span>
+            </div>
+          </div>
+          <div class="case-content">
+            <h3 class="case-title">Assessment Técnico de Cisão Corporativa</h3>
+            <p class="case-desc">Diagnóstico end-to-end de aplicações, RPAs, integrações ERP/OT e roadmap de governança IAM e cibersegurança.</p>
+          </div>
+          <div class="case-footer">
+            <div class="case-stack-logos">
+              <img src="assets/logos/azure.svg" alt="Azure" title="Azure" />
+              <img src="assets/logos/oracle.svg" alt="ERP" title="ERP / Dados" />
+              <img src="assets/logos/keycloak.svg" alt="IAM" title="IAM / NIST" />
+            </div>
+            <button type="button" class="btn-inspect" data-case="assessment-ma">Ver Arquitetura ↗</button>
+          </div>
+        </article>
+
+        <!-- 5. IA CORPORATIVA -->
+        <article class="case-card" data-cats="ia devops">
+          <div class="case-banner">
+            <img src="assets/case-ai.jpg" alt="IA Corporativa" />
+            <div class="case-banner-overlay">
+              <span class="case-domain">IA &amp; Multi-LLM</span>
+              <span class="case-client-top">Plataforma Interna</span>
+            </div>
+          </div>
+          <div class="case-content">
+            <h3 class="case-title">Portal Corporativo de IA, RAG &amp; AIOps</h3>
+            <p class="case-desc">Plataforma Laravel + Docker com autenticação federada, RAG em bases corporativas, gateway multi-LLM e telemetria.</p>
+          </div>
+          <div class="case-footer">
+            <div class="case-stack-logos">
+              <img src="assets/logos/laravel.svg" alt="Laravel" title="Laravel" />
+              <img src="assets/logos/mysql.svg" alt="MySQL" title="MySQL" />
+              <img src="assets/logos/nginx.svg" alt="Nginx" title="Nginx" />
+              <img src="assets/logos/docker.svg" alt="Docker" title="Docker" />
+            </div>
+            <button type="button" class="btn-inspect" data-case="ia-corporativa">Ver Arquitetura ↗</button>
+          </div>
+        </article>
+
+        <!-- 6. MACRO MANAGER -->
+        <article class="case-card" data-cats="rpa legado">
+          <div class="case-banner">
+            <img src="assets/case-rpa.jpg" alt="Macro Manager" />
+            <div class="case-banner-overlay">
+              <span class="case-domain">RPA Híbrido &amp; Desktop</span>
+              <span class="case-client-top">BPO &amp; Serviços</span>
+            </div>
+          </div>
+          <div class="case-content">
+            <h3 class="case-title">Framework RPA Híbrido &amp; Gestão de Credenciais</h3>
+            <p class="case-desc">Automações C# + FastAPI + Selenium com alto reuso entre clientes e migração segura para credenciais criptografadas.</p>
+          </div>
+          <div class="case-footer">
+            <div class="case-stack-logos">
+              <img src="assets/logos/csharp.svg" alt="C#" title="C#" />
+              <img src="assets/logos/python.svg" alt="Python" title="Python" />
+              <img src="assets/logos/fastapi.svg" alt="FastAPI" title="FastAPI" />
+            </div>
+            <button type="button" class="btn-inspect" data-case="macro-manager">Ver Arquitetura ↗</button>
+          </div>
+        </article>
+
+        <!-- 7. WORKERS & IA DOCUMENTAL -->
+        <article class="case-card" data-cats="rpa ia">
+          <div class="case-banner">
+            <img src="assets/case-ai.jpg" alt="Workers Assíncronos" />
+            <div class="case-banner-overlay">
+              <span class="case-domain">Workers &amp; IA Documental</span>
+              <span class="case-client-top">Backoffice &amp; ERP</span>
+            </div>
+          </div>
+          <div class="case-content">
+            <h3 class="case-title">Workers RabbitMQ &amp; Automação Financeira com IA</h3>
+            <p class="case-desc">Processamento paralelo em Python + RabbitMQ, conciliação SAP com leitura de PDFs por IA e transição entre suites RPA.</p>
+          </div>
+          <div class="case-footer">
+            <div class="case-stack-logos">
+              <img src="assets/logos/python.svg" alt="Python" title="Python" />
+              <img src="assets/logos/rabbitmq.svg" alt="RabbitMQ" title="RabbitMQ" />
+              <img src="assets/logos/oracle.svg" alt="Oracle" title="Oracle" />
+              <img src="assets/logos/uipath.svg" alt="UiPath" title="UiPath" />
+            </div>
+            <button type="button" class="btn-inspect" data-case="workers-docling">Ver Arquitetura ↗</button>
+          </div>
+        </article>
+
+        <!-- 8. DEVSECOPS & OPENSHIFT -->
+        <article class="case-card" data-cats="devops">
+          <div class="case-banner">
+            <img src="assets/case-cloud.jpg" alt="DevSecOps" />
+            <div class="case-banner-overlay">
+              <span class="case-domain">DevSecOps &amp; Containers</span>
+              <span class="case-client-top">Energia &amp; Cloud</span>
+            </div>
+          </div>
+          <div class="case-content">
+            <h3 class="case-title">Governança DevSecOps &amp; Arquitetura OpenShift</h3>
+            <p class="case-desc">Esteiras GitLab/Jenkins com gates SAST/DAST automatizados e referência arquitetural em Red Hat OpenShift e GitOps.</p>
+          </div>
+          <div class="case-footer">
+            <div class="case-stack-logos">
+              <img src="assets/logos/gitlab.svg" alt="GitLab" title="GitLab" />
+              <img src="assets/logos/jenkins.svg" alt="Jenkins" title="Jenkins" />
+              <img src="assets/logos/redhat.svg" alt="Red Hat" title="OpenShift" />
+              <img src="assets/logos/kubernetes.svg" alt="Kubernetes" title="Kubernetes" />
+            </div>
+            <button type="button" class="btn-inspect" data-case="devsecops-openshift">Ver Arquitetura ↗</button>
+          </div>
+        </article>
+
+        <!-- 9. PRODUTOS & MOBILE ERP -->
+        <article class="case-card" data-cats="ia legado">
+          <div class="case-banner">
+            <img src="assets/case-cloud.jpg" alt="Produtos & Mobile" />
+            <div class="case-banner-overlay">
+              <span class="case-domain">Produtos &amp; Mobile ERP</span>
+              <span class="case-client-top">Corporativo &amp; Indústria</span>
+            </div>
+          </div>
+          <div class="case-content">
+            <h3 class="case-title">Gestão Financeira com IA &amp; App Multiplataforma</h3>
+            <p class="case-desc">Portais internos de governança financeira com IA documental e app Flutter desacoplado de ERPs corporativos via APIs.</p>
+          </div>
+          <div class="case-footer">
+            <div class="case-stack-logos">
+              <img src="assets/logos/laravel.svg" alt="Laravel" title="Laravel" />
+              <img src="assets/logos/flutter.svg" alt="Flutter" title="Flutter" />
+              <img src="assets/logos/postgresql.svg" alt="PostgreSQL" title="PostgreSQL" />
+              <img src="assets/logos/keycloak.svg" alt="Keycloak" title="Keycloak" />
+            </div>
+            <button type="button" class="btn-inspect" data-case="produtos-mobile">Ver Arquitetura ↗</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04. PERCURSO, FORMAÇÃO & PRÊMIOS -->
+  <section class="section" id="percurso">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <span class="section-kicker">(04) Trajetória &amp; Credenciais</span>
+          <h2 class="section-title">Experiência e formação</h2>
+        </div>
+        <p class="section-sub">
+          Crescimento contínuo do desenvolvimento web à liderança técnica e arquitetura de plataformas.
+        </p>
+      </div>
+
+      <div class="cert-spotlight" aria-label="Chamada para página de certificações">
+        <div>
+          <span class="cert-spotlight-kicker">Credenciais Verificadas · Educação Contínua</span>
+          <h3>14 Certificações, Diplomas &amp; Extensões Universitárias</h3>
+          <p>
+            Página exclusiva reunindo especializações em IA Agêntica, Cloud Computing, Arquitetura de Redes IoT, extensão executiva pela PUCRS, diplomas acadêmicos e prêmios em hackathons.
+          </p>
+          <div class="cert-spotlight-pills">
+            <span class="cert-issuer-tag">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="9" height="9" fill="#f25022"/><rect x="13" y="2" width="9" height="9" fill="#7fba00"/><rect x="2" y="13" width="9" height="9" fill="#00a4ef"/><rect x="13" y="13" width="9" height="9" fill="#ffb900"/></svg>
+              Microsoft Foundry AI
+            </span>
+            <span class="cert-issuer-tag">
+              <svg viewBox="0 0 32 16" aria-hidden="true"><path fill="#60a5fa" d="M1 2h6v2H1zm8 0h9v2H9zm11 0h11v2H20zM2 5h4v2H2zm8 0h8v2h-8zm11 0h9v2h-9zM2 8h4v2H2zm8 0h8v2h-8zm11 0h9v2h-9zM1 11h6v2H1zm8 0h9v2H9zm11 0h11v2H20z"/></svg>
+              IBM Bob AI
+            </span>
+            <span class="cert-issuer-tag">
+              <img src="assets/logos/googlecloud.svg" alt="" />
+              Google Cloud (5 Badges)
+            </span>
+            <span class="cert-issuer-tag">
+              <img src="assets/badges/cisco-iot.png" alt="" />
+              Cisco IoT
+            </span>
+            <span class="cert-issuer-tag">PUCRS · 4 Extensões (40h)</span>
+            <span class="cert-issuer-tag">FATEC / ETEC</span>
+          </div>
+        </div>
+        <div class="cert-spotlight-cta">
+          <a href="certificacoes.html" class="btn btn-primary">Explorar Certificações e Diplomas ↗</a>
+          <span class="cert-spotlight-note">Microsoft · IBM · Google Cloud · PUCRS · Cisco · FATEC</span>
+        </div>
+      </div>
+
+      <div class="journey-layout">
+        <div class="timeline">
+          <article class="tl-item">
+            <div class="tl-head">
+              <h3 class="tl-role">Líder Técnico</h3>
+              <span class="tl-date">Out 2024 – Atual</span>
+            </div>
+            <p class="tl-org">Global Hitss Brasil</p>
+            <p class="tl-desc">Liderança de squads multidisciplinares, Torre de RPA, arquitetura Cloud (AWS/OCI), DevOps com Jenkins Workers/GitLab, Assessments e plataformas com IA.</p>
+          </article>
+
+          <article class="tl-item">
+            <div class="tl-head">
+              <h3 class="tl-role">Desenvolvedor PHP Pleno &amp; Líder Técnico de Entregas</h3>
+              <span class="tl-date">Jul 2021 – Nov 2024</span>
+            </div>
+            <p class="tl-org">Global Hitss Brasil · Claro TI &amp; Embratel</p>
+            <p class="tl-desc">Sistemas críticos e legados em PHP (Laravel/Yii2), SQL Server/MySQL, servidores Linux na AWS e dashboards executivos de BI.</p>
+          </article>
+
+          <article class="tl-item">
+            <div class="tl-head">
+              <h3 class="tl-role">Desenvolvedor PHP Técnico</h3>
+              <span class="tl-date">Jan 2020 – Jul 2021</span>
+            </div>
+            <p class="tl-org">Global Hitss Brasil · Claro</p>
+            <p class="tl-desc">Desenvolvimento full stack em PHP/Laravel/Yii2, migrações MySQL para SQL Server e sustentação em Linux/AWS.</p>
+          </article>
+
+          <article class="tl-item">
+            <div class="tl-head">
+              <h3 class="tl-role">FIAP · INJOY Travel · ALESP</h3>
+              <span class="tl-date">2017 – Jan 2022</span>
+            </div>
+            <p class="tl-org">Educação, Turismo e Setor Público · São Paulo</p>
+            <p class="tl-desc">Plataforma Moodle (PHP/Testes Unitários/SonarQube/Node CLI na FIAP), sistemas PHP OO com AWS na INJOY e sistemas internos na ALESP.</p>
+          </article>
+        </div>
+
+        <div class="creds-stack">
+          <div class="cred-box">
+            <h3>Formação</h3>
+            <ul class="cred-list">
+              <li><strong>Análise e Desenv. de Sistemas</strong><span>FATEC Ipiranga · 2018 – 2020</span></li>
+              <li><strong>Técnico em Informática</strong><span>ETEC Jaraguá · 2016 – 2017</span></li>
+            </ul>
+          </div>
+
+          <div class="cred-box">
+            <h3>Certificações &amp; Extensões</h3>
+            <ul class="cred-list">
+              <li><strong>Microsoft Foundry Agentic Engineer &amp; IBM Bob AI</strong><span>IA Agêntica &amp; Engenharia Corporativa · 2026</span></li>
+              <li><strong>Google Cloud (Core Infra, App Mod &amp; BigQuery)</strong><span>5 Badges Verificados · Google Skills</span></li>
+              <li><strong>PUCRS · Negociação, Gestão de Crise, Coaching &amp; Indústria 4.0</strong><span>4 Extensões Universitárias · 40h</span></li>
+              <li><strong>Cisco Networking Academy · Introduction to IoT</strong><span>Automação, Redes &amp; Cibersegurança</span></li>
+            </ul>
+            <a href="certificacoes.html" class="btn btn-primary" style="width:100%; margin-top:14px; justify-content:center;">Explorar Certificações e Diplomas ↗</a>
+          </div>
+
+          <div class="cred-box">
+            <h3>Prêmios</h3>
+            <ul class="cred-list">
+              <li><strong>Campeão Regional · Hackathon InterFatec 2022</strong><span>1º Lugar + Campeão Interno FATEC Ipiranga</span></li>
+              <li><strong>Vice-Campeão · Challenge BigQuery</strong><span>Google &amp; Claro Brasil</span></li>
+              <li><strong>Aluno Destaque 2022 &amp; TCC Prata da Casa</strong><span>FATEC Ipiranga</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05. CONTATO -->
+  <section class="section" id="contato">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <span class="section-kicker">(05) Contato</span>
+          <h2 class="section-title">Vamos conversar</h2>
+        </div>
+        <p class="section-sub">
+          Canais diretos e acesso rápido ao meu currículo completo em PDF.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>Canais Diretos</h3>
+          <div class="contact-channels">
+            <div class="channel-row">
+              <div><small>E-mail</small><a href="mailto:jocarvalhosantos@gmail.com">jocarvalhosantos@gmail.com</a></div>
+              <button type="button" class="btn btn-ghost btn-sm" id="copyEmailBtn">Copiar</button>
+            </div>
+            <div class="channel-row">
+              <div><small>WhatsApp</small><span>+55 11 91533-6691</span></div>
+              <span class="mono" style="font-size: 11.5px; color: var(--emerald);">SP · BR</span>
+            </div>
+            <div class="channel-row">
+              <div><small>LinkedIn</small><a href="https://www.linkedin.com/in/jonas-santos-b5289836/" target="_blank" rel="noopener">linkedin.com/in/jonas-santos-b5289836</a></div>
+              <a href="https://www.linkedin.com/in/jonas-santos-b5289836/" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">Abrir ↗</a>
+            </div>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+            <a href="Jonas-Carvalho-CV.pdf" download class="btn btn-primary">Baixar Currículo PDF ↓</a>
+            <a href="curriculo.html" class="btn btn-ghost">Visualizar A4 Online ↗</a>
+          </div>
+        </div>
+
+        <div class="wa-card">
+          <h3>Mensagem Direta (WhatsApp)</h3>
+          <div class="wa-topics" role="group" aria-label="Temas para contato">
+            <button type="button" class="wa-topic active" data-template="Olá Jonas! Vi seu portfólio e gostaria de conversar sobre Liderança Técnica.">Liderança</button>
+            <button type="button" class="wa-topic" data-template="Olá Jonas! Gostaria de falar sobre automação RPA (Python/UiPath/Macro Manager).">RPA</button>
+            <button type="button" class="wa-topic" data-template="Olá Jonas! Vamos conversar sobre DevOps, Jenkins/GitLab e Cloud?">DevOps &amp; Cloud</button>
+            <button type="button" class="wa-topic" data-template="Olá Jonas! Temos um desafio de Assessment ou sistema legado para avaliar.">Legado / Assessment</button>
+          </div>
+          <textarea class="wa-textarea" id="waInput" aria-label="Mensagem para WhatsApp">Olá Jonas! Vi seu portfólio e gostaria de conversar sobre Liderança Técnica.</textarea>
+          <a id="waSend" href="https://wa.me/5511915336691" target="_blank" rel="noopener" class="btn btn-primary" style="width: 100%;">Enviar no WhatsApp ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© 2026 Jonas Carvalho · Líder Técnico</span>
+      <span class="mono"><a href="curriculo.html">curriculo.html</a> · <a href="Jonas-Carvalho-CV.pdf" download>Jonas-Carvalho-CV.pdf</a></span>
+    </div>
+  </footer>
+
+  <!-- MODAL INSPECTOR -->
+  <div class="modal-backdrop" id="caseModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-dialog">
+      <div class="modal-head">
+        <div>
+          <span class="section-kicker" id="modalKicker" style="margin-bottom: 4px;">Arquitetura</span>
+          <h3 id="modalTitle" style="font-family: Archivo, sans-serif; font-size: 22px; font-weight: 900;"></h3>
+          <p id="modalClient" class="mono" style="font-size: 12px; color: var(--text-muted); margin-top: 4px;"></p>
+        </div>
+        <button type="button" class="modal-close" id="modalClose" aria-label="Fechar janela">✕</button>
+      </div>
+      <div class="modal-block">
+        <h4>Contexto</h4>
+        <p id="modalContext"></p>
+      </div>
+      <div class="modal-block">
+        <h4>Arquitetura &amp; Execução</h4>
+        <ul class="modal-list" id="modalArch"></ul>
+      </div>
+      <div class="modal-block">
+        <h4>Resultados</h4>
+        <ul class="modal-list" id="modalImpact"></ul>
+      </div>
+      <div class="modal-block" style="margin-bottom: 0;">
+        <h4>Tecnologias</h4>
+        <div class="modal-tags" id="modalStack"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
