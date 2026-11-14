@@ -13,17 +13,17 @@ Site estático containerizado (Nginx Alpine) com portfólio técnico, página de
 ## Execução Local com Docker
 
 ```bash
-docker compose up -d --build
+docker build -t jonascarvalho-site .
+docker run -d -p 8080:80 --name jonascarvalho-site jonascarvalho-site
 ```
 
 Acesse `http://localhost:8080`.
 
 ## Deploy no Coolify (`jonas.novashift.com.br`)
 
-1. Crie um novo recurso **Public Repository** (ou via GitHub App) apontando para este repositório na branch `main`.
-2. Selecione **Build Pack: `Dockerfile`**.
-3. Em **Network / Ports Exposes**, defina `80`.
-4. Em **Domains**, aponte `https://jonas.novashift.com.br`.
+1. Crie um novo recurso **Public Repository** (ou via sua integração GitHub) apontando para este repositório na branch `main`.
+2. Funciona tanto com **Build Pack: `Dockerfile`** (porta `80`) quanto com **`Docker Compose`** (`docker-compose.yml` usa apenas `expose: ["80"]`, sem conflito de porta no host).
+3. Em **Domains**, aponte `https://jonas.novashift.com.br` (ou `https://jonas.novashift.com.br:80` se configurar a porta no serviço `web`).
 5. Em **Health Check** (opcional), utilize:
    - Path: `/healthz`
    - Port: `80`
