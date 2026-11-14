@@ -351,20 +351,20 @@
 
     /* MAIN CONTENT */
     .main {
-      padding: 11px 17px 9px;
+      padding: 16px 20px 14px;
       display: flex;
       flex-direction: column;
-      gap: 5px;
+      gap: 9px;
     }
 
     .main-header {
-      padding-bottom: 4px;
+      padding-bottom: 6px;
       border-bottom: 1.5px solid var(--text-main);
     }
 
     .name {
       font-family: "Archivo", sans-serif;
-      font-size: 22.5px;
+      font-size: 25.5px;
       font-weight: 900;
       letter-spacing: -0.025em;
       line-height: 1;
@@ -377,19 +377,19 @@
     }
 
     .subtitle {
-      margin-top: 3px;
-      font-size: 10.8px;
+      margin-top: 4px;
+      font-size: 11.4px;
       font-weight: 700;
       color: var(--text-main);
       letter-spacing: -0.01em;
     }
 
     .tagline {
-      margin-top: 2px;
+      margin-top: 3px;
       font-family: "IBM Plex Mono", monospace;
-      font-size: 8.1px;
+      font-size: 8.5px;
       color: var(--text-muted);
-      line-height: 1.3;
+      line-height: 1.35;
     }
 
     .page-kicker {
@@ -418,20 +418,20 @@
     .section {
       display: flex;
       flex-direction: column;
-      gap: 3.5px;
+      gap: 5px;
     }
 
     .sec-head {
       display: flex;
       align-items: center;
       gap: 6px;
-      padding-bottom: 2px;
+      padding-bottom: 2.5px;
       border-bottom: 1px solid var(--rule);
     }
 
     .sec-square {
-      width: 6px;
-      height: 6px;
+      width: 6.5px;
+      height: 6.5px;
       background: var(--accent);
       display: inline-block;
       flex-shrink: 0;
@@ -439,27 +439,27 @@
 
     .sec-head h2 {
       font-family: "Archivo", sans-serif;
-      font-size: 9.4px;
+      font-size: 10.2px;
       font-weight: 800;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.11em;
       text-transform: uppercase;
       color: var(--text-main);
     }
 
     .summary-text {
-      font-size: 8.65px;
-      line-height: 1.32;
+      font-size: 9.45px;
+      line-height: 1.44;
       color: var(--text-body);
     }
 
     .entry {
       display: flex;
       flex-direction: column;
-      gap: 1.5px;
+      gap: 2.5px;
     }
 
     .entry + .entry {
-      margin-top: 2px;
+      margin-top: 4px;
     }
 
     .entry-top {
@@ -470,15 +470,15 @@
     }
 
     .entry-role {
-      font-size: 9.4px;
+      font-size: 10.1px;
       font-weight: 700;
       color: var(--text-main);
-      line-height: 1.2;
+      line-height: 1.24;
     }
 
     .entry-date {
       font-family: "IBM Plex Mono", monospace;
-      font-size: 8px;
+      font-size: 8.4px;
       font-weight: 500;
       color: var(--accent);
       white-space: nowrap;
@@ -486,25 +486,25 @@
     }
 
     .entry-sub {
-      font-size: 8.2px;
+      font-size: 8.8px;
       font-style: italic;
       color: var(--text-muted);
-      line-height: 1.2;
+      line-height: 1.24;
     }
 
     .bullets {
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 1.2px;
-      margin-top: 1px;
+      gap: 2.5px;
+      margin-top: 1.5px;
     }
 
     .bullets li {
       position: relative;
-      padding-left: 10px;
-      font-size: 8.1px;
-      line-height: 1.24;
+      padding-left: 11px;
+      font-size: 8.95px;
+      line-height: 1.38;
       color: var(--text-body);
     }
 
@@ -575,31 +575,63 @@
     .creds-mini-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 4px;
+      gap: 5.5px;
     }
 
     .creds-mini-card {
-      padding: 3px 5.5px;
+      padding: 5px 7.5px;
       border: 1px solid #e2e8f0;
       border-left: 2.5px solid var(--accent);
       border-radius: 4px;
       background: #f8fafc;
       display: flex;
       flex-direction: column;
-      gap: 1px;
+      gap: 2px;
     }
 
     .creds-mini-card strong {
-      font-size: 7.95px;
+      font-size: 8.6px;
       font-weight: 700;
       color: var(--text-main);
-      line-height: 1.15;
+      line-height: 1.22;
     }
 
     .creds-mini-card span {
-      font-size: 7.3px;
+      font-size: 8px;
       color: var(--text-body);
-      line-height: 1.18;
+      line-height: 1.28;
+    }
+
+    .cv-logo-grid {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 4.5px;
+    }
+
+    .cv-logo-pill {
+      display: flex;
+      align-items: center;
+      gap: 4.5px;
+      padding: 3.5px 5px;
+      border: 1px solid #e2e8f0;
+      border-radius: 4px;
+      background: #f8fafc;
+      font-size: 7.7px;
+      font-weight: 600;
+      color: var(--text-main);
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    .cv-logo-pill img {
+      width: 12px;
+      height: 12px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    .cv-logo-pill img.invert-on-light {
+      filter: brightness(0.15);
     }
 
     .sb-list-dense {
@@ -647,8 +679,12 @@
         gap: 9px;
       }
 
+      .a4-page:nth-of-type(2) .sec-head h2 {
+        font-size: 9.6px;
+      }
+
       .a4-page:nth-of-type(2) .project-card {
-        padding: 6.5px 9px;
+        padding: 6px 8.5px;
         gap: 2.5px;
       }
     }
@@ -814,8 +850,35 @@
           <h2>Perfil Profissional</h2>
         </div>
         <p class="summary-text">
-          Líder Técnico com mais de 8 anos de experiência na construção e modernização de sistemas críticos, arquitetura em nuvem, engenharia e gestão de Torre de RPA, infraestrutura DevOps/DevSecOps e condução de Assessments estratégicos (cisões M&amp;A e diagnósticos de legado). Atuação contínua em operações corporativas de grande escala em telecomunicações, indústria, energia e serviços, unindo liderança hands-on de squads multidisciplinares, governança técnica e entrega de plataformas escaláveis com IA generativa.
+          Líder Técnico com mais de 8 anos de experiência na concepção, arquitetura e modernização de sistemas corporativos críticos, engenharia e gestão de Torre de RPA, pipelines DevOps/DevSecOps com Jenkins e GitLab CI, infraestrutura Multi-Cloud e Assessments estratégicos (cisões M&amp;A e diagnósticos de legado). Atuação contínua em operações de alta escala nos setores de telecomunicações, indústria, energia e serviços, unindo liderança técnica hands-on de squads multidisciplinares, arquitetura distribuída e plataformas escaláveis com IA Generativa e RAG.
         </p>
+      </section>
+
+      <section class="section">
+        <div class="sec-head">
+          <span class="sec-square"></span>
+          <h2>Principais Tecnologias, Linguagens &amp; Plataformas</h2>
+        </div>
+        <div class="cv-logo-grid">
+          <span class="cv-logo-pill"><img src="assets/logos/python.svg" alt="Python" />Python</span>
+          <span class="cv-logo-pill"><img src="assets/logos/uipath.svg" alt="UiPath" />UiPath</span>
+          <span class="cv-logo-pill"><img src="assets/logos/csharp.svg" alt="C#" />C# / Macro</span>
+          <span class="cv-logo-pill"><img src="assets/logos/jenkins.svg" alt="Jenkins" />Jenkins</span>
+          <span class="cv-logo-pill"><img src="assets/logos/gitlab.svg" alt="GitLab" />GitLab CI</span>
+          <span class="cv-logo-pill"><img src="assets/logos/docker.svg" alt="Docker" />Docker</span>
+          <span class="cv-logo-pill"><img src="assets/logos/kubernetes.svg" alt="Kubernetes" />Kubernetes</span>
+          <span class="cv-logo-pill"><img class="invert-on-light" src="assets/logos/aws.svg" alt="AWS" />AWS Cloud</span>
+          <span class="cv-logo-pill"><img src="assets/logos/oracle.svg" alt="OCI" />Oracle OCI</span>
+          <span class="cv-logo-pill"><img src="assets/logos/googlecloud.svg" alt="GCP" />Google GCP</span>
+          <span class="cv-logo-pill"><img src="assets/logos/nodejs.svg" alt="Node.js" />Node.js</span>
+          <span class="cv-logo-pill"><img src="assets/logos/nestjs.svg" alt="NestJS" />NestJS</span>
+          <span class="cv-logo-pill"><img src="assets/logos/react.svg" alt="React" />React</span>
+          <span class="cv-logo-pill"><img src="assets/logos/typescript.svg" alt="TypeScript" />TypeScript</span>
+          <span class="cv-logo-pill"><img src="assets/logos/php.svg" alt="PHP" />PHP OO</span>
+          <span class="cv-logo-pill"><img src="assets/logos/laravel.svg" alt="Laravel" />Laravel</span>
+          <span class="cv-logo-pill"><img src="assets/logos/java.svg" alt="Java" />Java</span>
+          <span class="cv-logo-pill"><img src="assets/logos/postgresql.svg" alt="PostgreSQL" />PostgreSQL</span>
+        </div>
       </section>
 
       <section class="section">
@@ -831,10 +894,10 @@
           </div>
           <p class="entry-sub">Liderança multidisciplinar, Arquitetura Cloud/RPA/IA, DevSecOps &amp; Assessments · São Paulo, SP</p>
           <ul class="bullets">
-            <li><strong>Gestão de Torre de RPA e Squads Multidisciplinares:</strong> Direção técnica de equipes multidisciplinares em projetos BPO e corporativos, conduzindo dailies, revisões arquiteturais, estimativas de esforço (HLE/PCV) e entrevistas técnicas.</li>
-            <li><strong>Arquitetura RPA Híbrida e Microsserviços:</strong> Concepção de robôs em <strong>Python (FastAPI, Selenium, UIA)</strong>, <strong>UiPath</strong>, <strong>Automation 360 / IBM RPA</strong>, <strong>Macro Manager (C#)</strong> e <strong>Power Automate</strong>, além de arquitetura em microsserviços empacotados com operação unificada via Docker e Nginx.</li>
-            <li><strong>DevOps, CI/CD e Orquestração com Jenkins:</strong> Implementação de controladores <strong>Jenkins</strong> com agentes/workers em Docker para orquestração de robôs e esteiras contínuas integradas ao <strong>GitLab CI</strong>, autenticação <strong>OIDC/OAuth2</strong> e stack de observabilidade (<strong>Grafana, Prometheus, Loki</strong>).</li>
-            <li><strong>Cloud, Assessments, IA &amp; AppSec:</strong> Arquitetura multi-cloud (<strong>AWS, OCI, OpenShift</strong>); Assessments M&amp;A e modernização de legado; plataformas corporativas com <strong>IA Generativa, RAG, Docling IA</strong>, segurança <strong>Keycloak/OAuth2</strong> e apps <strong>Flutter</strong> integrados via APIs.</li>
+            <li><strong>Gestão de Torre de RPA e Squads Multidisciplinares:</strong> Direção técnica de equipes multidisciplinares em projetos BPO e corporativos, conduzindo dailies, revisões arquiteturais, especificações funcionais, estimativas de esforço (HLE/PCV) e entrevistas técnicas.</li>
+            <li><strong>Arquitetura RPA Híbrida &amp; Microsserviços:</strong> Concepção de robôs distribuídos e APIs em <strong>Python (FastAPI, Selenium Headless, PyAutoGUI/UIA)</strong>, <strong>Macro Manager (C#/.NET)</strong>, <strong>UiPath</strong>, <strong>Automation 360</strong>, <strong>IBM RPA</strong> e <strong>Power Automate</strong>, com microsserviços containerizados em <strong>Docker</strong> sob proxy reverso <strong>Nginx</strong>, filas <strong>RabbitMQ / SQS</strong> e cache <strong>Redis</strong>.</li>
+            <li><strong>DevSecOps, CI/CD &amp; Orquestração com Jenkins Workers:</strong> Desenho e operação de controladores <strong>Jenkins</strong> com agentes/workers efêmeros em Docker para execução paralela de robôs e esteiras contínuas no <strong>GitLab CI</strong>, gates com <strong>SonarQube</strong>, proteção de credenciais e observabilidade completa com <strong>Grafana, Prometheus, Loki e OpenTelemetry</strong>.</li>
+            <li><strong>Multi-Cloud, Segurança IAM, Assessments M&amp;A &amp; IA:</strong> Arquiteturas em <strong>AWS (EKS, ECS, Lambda, DynamoDB, Aurora/RDS)</strong>, <strong>Oracle Cloud (OCI)</strong>, <strong>GCP</strong> e <strong>Red Hat OpenShift</strong>; autenticação federada <strong>Keycloak (OAuth 2.0/OIDC)</strong> e conformidade <strong>OWASP</strong>; Assessments M&amp;A (LeanIX/SAP/OT); portais de <strong>IA Generativa (RAG, Gateways Multi-LLM, Docling IA)</strong> e apps <strong>Flutter</strong> desacoplados via APIs.</li>
           </ul>
         </article>
 
@@ -845,8 +908,8 @@
           </div>
           <p class="entry-sub">Sistemas Corporativos, Telecom, Legado &amp; Cloud (Claro TI &amp; Embratel) · São Paulo, SP</p>
           <ul class="bullets">
-            <li><strong>Sistemas Críticos e Legado Telecom:</strong> Liderança técnica na sustentação e evolução de plataformas web e legadas em <strong>PHP (Laravel, Yii2)</strong>, <strong>MySQL</strong>, <strong>SQL Server</strong>, <strong>Node.js</strong> e servidores <strong>Linux</strong> na AWS.</li>
-            <li><strong>Dados, Integrações &amp; BI Executivo:</strong> Migrações estruturais entre bancos de dados, otimização de queries de alto volume, automação de rotinas operacionais e desenvolvimento de dashboards analíticos com gráficos interativos.</li>
+            <li><strong>Arquitetura Web Corporativa &amp; Sustentação de Legado Telecom:</strong> Liderança técnica na sustentação e evolução de plataformas de alta criticidade em <strong>PHP Orientado a Objetos (Laravel, Yii2)</strong>, <strong>Node.js (NestJS/Express)</strong>, <strong>React/TypeScript</strong>, <strong>MySQL</strong>, <strong>Oracle</strong> e <strong>SQL Server</strong> em servidores Linux na AWS.</li>
+            <li><strong>Dados, Integrações RESTful &amp; BI Executivo:</strong> Migrações estruturais entre bancos de dados volumosos, otimização de queries SQL complexas e filas assíncronas, automação de rotinas operacionais, controle de acesso granular e construção de dashboards analíticos e relatórios interativos para diretoria.</li>
           </ul>
         </article>
 
@@ -857,7 +920,7 @@
           </div>
           <p class="entry-sub">Desenvolvimento Full Stack &amp; Sustentação de Sistemas (Claro) · São Paulo, SP</p>
           <ul class="bullets">
-            <li>Desenvolvimento e manutenção de sistemas internos em <strong>PHP OO, Laravel e Yii2</strong>, migração de dados MySQL para SQL Server, operação em servidores Linux/AWS e interfaces administrativas responsivas.</li>
+            <li>Desenvolvimento e manutenção de portais operacionais e módulos internos em <strong>PHP OO, Laravel, Yii2, JavaScript/Bootstrap</strong>; migração de dados MySQL para SQL Server; rotinas automatizadas e sustentação contínua em ambientes Linux/AWS.</li>
           </ul>
         </article>
 
@@ -868,8 +931,8 @@
           </div>
           <p class="entry-sub">Trajetória prévia em Educação, Turismo e Setor Público · São Paulo, SP</p>
           <ul class="bullets">
-            <li><strong>FIAP (Jul 2021 – Jan 2022):</strong> Evolução de plataforma <strong>Moodle</strong> (PHP), APIs RESTful, Testes Unitários, Node.js CLI, governança com <strong>SonarQube</strong>, arquitetura MVC e SQL Server.</li>
-            <li><strong>INJOY Travel (2019 – 2020) &amp; ALESP (2017):</strong> Aplicações web em PHP orientado a objetos com AWS e MySQL; suporte técnico e manutenção de sistemas na Assembleia Legislativa de SP.</li>
+            <li><strong>FIAP (Jul 2021 – Jan 2022):</strong> Evolução de plataforma <strong>Moodle (PHP)</strong>, criação de APIs RESTful, testes unitários automatizados, ferramentas CLI em <strong>Node.js</strong>, arquitetura MVC, <strong>SQL Server</strong> e governança de código com <strong>SonarQube</strong>.</li>
+            <li><strong>INJOY Travel (2019 – 2020) &amp; ALESP (2017):</strong> Aplicações web de operações e reservas em PHP OO na AWS com MySQL; suporte técnico N1/N2 e manutenção de sistemas corporativos na Assembleia Legislativa de São Paulo.</li>
           </ul>
         </article>
       </section>
